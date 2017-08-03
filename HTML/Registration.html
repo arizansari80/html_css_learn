@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css"> -->
+  	<link rel="stylesheet" href="../CSS/RegistrationCSS.css">
+  	<!-- <link rel="stylesheet" href="../CSS/myCustom.css"> -->
+</head>
+<body>
+	<form>
+		<fieldset class="commonFieldset">
+			<legend class="commonLegend">Personal Information</legend>
+
+			<!-- Name -->
+			<div class="eachContainer flexClass" id="nameFlex">
+				<section class="flexMember">
+					<p class="commonP">First Name</p>
+					<input type="text" class="commonInput compulsory" id="firstName">
+					<span class="commonSpan myHidden">*Please fill this field</span>
+				</section>
+				<section class="flexMember">
+					<p class="commonP">Middle Name</p>
+					<input type="text" class="commonInput" id="middleName">
+				</section>
+				<section class="flexMember">
+					<p class="commonP">Last Name</p>
+					<input type="text" class="commonInput compulsory" id="lastName">
+					<span class="commonSpan myHidden">*Please fill this field</span>
+				</section>
+			</div><br>
+			
+			<!-- Gender -->
+
+			<div class="eachContainer">
+				<p class="commonP">Gender</p>
+				<select name="gender" id="genderSelect" class="selection">
+					<option value="male" class="genderOption">Male</option>
+					<option value="female" class="genderOption">Female</option>
+				</select>
+			</div><br>
+
+			<!-- Date Of Birth -->
+
+			<div class="eachContainer flexClass">
+				<section id="daySec" class="flexMember">
+					<p class="commonP">Day</p>
+					<input type="text" class="commonInput compulsory onlyNumber" id="day">
+					<span class="commonSpan myHidden">*Please fill</span>
+				</section>
+				<section id="monthSec" class="flexMember">
+					<p class="commonP">Month</p>
+					<select name="month" id="month" class="selection">
+						<option value="jan">January</option>
+						<option value="feb">February</option>
+						<option value="mar">March</option>
+						<option value="apr">April</option>
+						<option value="may">May</option>
+						<option value="jun">June</option>
+						<option value="jul">July</option>
+						<option value="aug">August</option>
+						<option value="sep">September</option>
+						<option value="oct">October</option>
+						<option value="nov">November</option>
+						<option value="dec">December</option>
+					</select>
+				</section>
+				<section id="yearSec" class="flexMember">
+					<p class="commonP">Year</p>
+					<input type="text" class="commonInput compulsory onlyNumber" id="year">
+					<span class="commonSpan myHidden">*Please fill</span>
+				</section>
+			</div><br>
+
+			<!-- Address -->
+
+			<div class="eachContainer">
+				<p class="commonP">Address</p>
+				<div class="flexClass">
+					<section class="flexMember">
+						<input type="text" class="commonInput compulsory" placeholder="House No. Street Name" id="house">
+						<span class="commonSpan myHidden">*Please fill this field</span>
+					</section>
+					<section class="flexMember">
+						<input type="text" class="commonInput compulsory" placeholder="Town" id="town">
+						<span class="commonSpan myHidden">*Please fill this field</span>
+					</section>
+					<section class="flexMember">
+						<input type="text" class="commonInput compulsory" placeholder="City" id="city">
+						<span class="commonSpan myHidden">*Please fill this field</span>
+					</section>
+				</div><br>
+				<div class="flexClass">
+					<section class="flexMember">
+						<input type="text" class="commonInput compulsory" placeholder="District" id="district">
+						<span class="commonSpan myHidden">*Please fill this field</span>
+					</section>
+					<section class="flexMember">
+						<input type="text" class="commonInput compulsory" placeholder="State" id="state">
+						<span class="commonSpan myHidden">*Please fill this field</span>
+					</section>
+					<section class="flexMember">
+						<input type="text" class="commonInput compulsory onlyNumber" placeholder="Pin Code" id="pinCode">
+						<span class="commonSpan myHidden">*Please fill this field</span>
+					</section>
+				</div>
+			</div><br>
+
+			<!-- Mobile -->
+
+			<div class="eachContainer">
+				<p class="commonP">Mobile</p>
+				<input type="text" class="commonInput compulsory onlyNumber" id="mobile">
+				<span class="commonSpan myHidden">*Please fill this field</span>
+			</div><br>
+			<!-- Email -->
+			
+			<div class="eachContainer">
+				<p class="commonP">Email</p>
+				<input type="text" class="commonInput compulsory" id="email">
+				<span class="commonSpan myHidden">*Please enter correct Email</span>
+			</div><br>
+
+			<!-- Button -->
+			<button id="sendMailBtn" type="button">Send Mail</button>
+			<br>
+			<!-- <span class="commonSpan myShow"></span> -->
+		</fieldset>
+
+		<!--<fieldset class="commonFieldset">
+			<legend class="commonLegend">Account Information</legend>
+			<div class="eachContainer">
+				<p class="commonP"></p>
+				<input type="text" class="commonInput">
+			</div>
+		</fieldset>
+
+		<fieldset class="commonFieldset">
+			<legend class="commonLegend">Login Information</legend>
+			<div class="eachContainer">
+				<p class="commonP"></p>
+				<input type="text" class="commonInput">
+			</div>
+		</fieldset>-->
+	</form>
+	
+	<footer></footer>
+	<script src="../JS/jquery-3.2.1.js"></script>
+	<!-- <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+	<script src="../JS/RegistrationJS.js"></script>
+	<script src="../JS/myCustom.js"></script>
+</body>
+</html>

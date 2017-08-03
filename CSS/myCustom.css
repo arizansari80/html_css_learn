@@ -1,0 +1,367 @@
+/*Header Maker*/
+
+body{
+	margin-top:0;
+	margin-left:10%;
+	margin-right:10%;
+	box-shadow:0px 20px 20px grey;
+}
+header{
+	position:relative;
+	width:100%;
+	height:175px;
+	top:0;
+}
+header>div{
+	width:100%;
+	background-color:#5d5dc0;	
+}
+header>div:first-of-type{
+	height:25px;
+	position:absolute;
+	top:0;
+}
+header>div:last-of-type{
+	position:absolute;
+	bottom:0;
+	height:50px;
+}
+#myMenuUl>li{
+	padding:0 10px;
+	margin-top:10px;
+}
+.myFlexMember>a{
+	color:black;
+	font-size:20px;
+	line-height:40px;
+}
+#myMenuUl{
+	margin-top:0;
+	margin-bottom:0;
+}
+
+/*Menu Maker*/
+
+.myUlMenu{
+	padding:0;
+	list-style:none;
+}
+.myFlexContainer{
+	display:flex;
+	height:100%;
+}
+.myFlexMember{
+	height:80%;
+	position:relative;
+}
+.myUlMenu a{
+	display:block;
+	text-decoration:none;
+	width:100%;
+	height:100%;
+}
+.myFlexMemberActive{
+	/*border-top-right-radius:10px;
+	border-top-left-radius:10px;*/
+	background-color:white;
+	border-right:0;
+	color:green;
+	box-shadow:0px 5px 5px 0px grey;
+}
+
+/*Menu Maker*/
+
+/*Slider Begin*/
+#mySliderDivContainer{
+	position:relative;
+	width:70%;
+	overflow:hidden;
+}
+#mySliderContainer{
+	display:flex;
+	//width:3000px;
+	height:100%;
+	//transition:all 0s 0s;
+	transition-timing-function:linear;
+	position:relative;
+}
+ul{
+	padding:0;
+	list-style-type:none;
+	margin-top:0;
+	margin-bottom:0;
+}
+.mySliderMember{
+	float:left;
+	height:100%;
+	//width:600px;
+}
+.mySliderMember>img{
+	width:100%;
+	height:100%;
+	display:block;
+}
+#myLeftButton{
+	top:0;
+	left:0;
+	outline:none;
+}
+.btn{
+	width:12.5%;
+	height:100%;
+	position:absolute;
+	background:transparent;
+	border:0;
+	cursor:pointer;
+	outline:none;
+	z-index:10;
+}
+#myRightButton{
+	top:0;
+	right:0;
+	outline:none;		
+}
+#myLeftButton:hover{
+	background:linear-gradient(to right,lightgrey,transparent 50%);
+}
+#myRightButton:hover{
+	background:linear-gradient(to left,lightgrey,transparent 50%);
+}
+.btn>img{
+	width:50px;
+	height:50px;
+}
+#sliderPointer{
+	position:absolute;
+	left:10%;
+	bottom:0;
+	margin-left:40%;
+	width:60%;
+	height:20px;
+}
+#sliderPointerUl{
+	width:100%;
+	height:100%;
+	margin-left:35%;
+}
+.sliderPointerMember{
+	width:3%;
+	display:inline-block;
+	/*border:2px dotted red;*/
+	height:15px;
+	cursor:pointer;
+	background:red;
+	opacity:0.5;
+}
+.sliderPointerActive{
+	background:green;
+	opacity:1;
+	/*border:none;*/
+}
+/*Slider Over*/
+
+/*Anime Begin*/
+.animeAside{
+	width:30%;
+	height:382px;
+	color:green;
+	overflow:hidden;
+}
+.animeUpUl{
+	padding:0;
+	list-style-type:none;
+	height:100%;
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	animation-name:move;
+	animation-iteration-count:infinite;
+	animation-duration:8s;
+	animation-timing-function:linear;
+	animation-fill-mode:forwards;
+}
+.animeAside>.animeUpUl:hover{
+	animation-play-state:paused;
+}
+@keyframes move{
+	from{margin-top:110%;}
+	to{margin-top:-100%;}
+}
+.animeUpLi{
+	height:20%;
+	font-size:16px;
+}
+/*Anime Over*/
+
+/*Form Validator Part*/
+.myHidden{
+	display:none;
+}
+.myShow{
+	display:block;
+	color:red;
+}
+
+/*Flex Display Section*/
+
+.myFlexDisplay{
+	display:flex;
+	justify-content:space-between;
+}
+
+
+/*Anonymous Classes*/
+
+.justToFun{
+	height:50px;
+	background:linear-gradient(#e6e6e6,#f2f2f2);
+	border-bottom:4px solid #e6e6e6;
+}
+.myVisibilityHidden{
+	visibility:hidden;
+}
+
+/*Form Styling*/
+
+form{
+	margin-top:100px;
+	width:80%;
+}
+fieldset{
+	width:100%;
+	padding:0 16px;
+	border:0;
+	border-radius:10px;
+	margin-bottom:50px;
+}
+fieldset>div{
+	margin:0 auto;
+}
+.commonLegend{
+	width:90%;
+	padding:0 0px;
+	border-bottom:1px solid grey;
+	font-weight:bold;
+	font-size:22px;
+	margin-bottom:12px;
+}
+.eachContainer{
+	width:90%;
+}
+.flexClass{
+	display:flex;
+}
+.flexMember{
+	width:33%;
+}
+.flexMember>input{
+	width:80%;
+}
+.commonInput{
+	height:40px;
+	line-height:40px;
+	font-size:18px;
+	text-indent:10px;
+	border:2px solid grey;
+	border-radius:5px;
+	background:linear-gradient(#e6e6e6,#f2f2f2 10%,#faf6f6,#e6e6e6 90%);
+}
+.commonDisabledInput{
+	height:40px;
+	line-height:40px;
+	font-size:18px;
+	text-indent:10px;
+	outline:none;
+	border:2px solid grey;
+	border-radius:5px;
+	cursor:not-allowed;
+	background:none;
+}
+.commonP{
+	font-size:18px;
+	font-weight:bold;
+	margin-top:4px;
+	margin-bottom:4px;
+}
+.commonSpan{
+	height:30px;
+	width:100%;
+	line-height:30px;
+	font-size:14px;
+}
+.myHidden{
+	display:none;
+}
+.myShow{
+	display:block;
+	color:red;
+}
+.selection{
+	height:46px;
+	font-size:16px;
+	line-height:40px;
+	border:2px solid grey;
+	border-radius:5px;
+	background:white;
+	background:linear-gradient(#e6e6e6,#f2f2f2 10%,#faf6f6,#e6e6e6 90%);
+}
+
+/*Color Classes*/
+.totalHeight{
+	height:100%;
+}
+.totalWidth{
+	width:100%;
+}
+.totalHW{
+	height:100%;
+	width:100%;
+}
+.noMargin{
+	margin:0;
+}
+.colorWarning{
+	color:red;
+}
+.colorSuccess{
+	color:green;
+}
+.colorInfo{
+	color:#0047b3;
+}
+
+/*Background Colour*/
+.bgWarning{
+	background:#ffcccc;
+	border:1px solid #ff1a1a;
+	border-radius:5px;
+}
+.bgSuccess{
+	background:#ccffcc;
+	border:1px solid #009900;
+	border-radius:5px;
+}
+
+/*Button Classes*/
+.myButton{
+	font-size:20px;
+	border-radius:10px;
+	outline:none;
+	background:#5ea559;
+	color:white;
+	border:2px solid white;
+	box-shadow:0px 5px 5px grey;
+	transition:all 0.05s 0s;
+	cursor:pointer;
+	text-align:center;
+}
+.myButton:active{
+	transform:translateY(5px);
+	box-shadow:0px 0px 5px grey;
+	outline:none;
+}
+
+/*Not Allowed Input*/
+.notAllowedInput{
+	background:lightgrey;
+}

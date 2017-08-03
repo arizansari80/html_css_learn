@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css"> -->
+  	<link rel="stylesheet" href="../CSS/myCustom.css">
+  	<!-- <link rel="stylesheet" href="../CSS/RegistrationCSS.css"> -->
+  	<link rel="stylesheet" href="../CSS/RegistrationPageCSS.css">
+</head>
+<body>
+	<header>
+		<div></div>
+		<div>
+			<ul id="myMenuUl" class="myFlexContainer myUlMenu">
+				<li class="myFlexMember myFlexMemberActive" id="firstE"><a href="#">Home</a></li>
+				<li class="myFlexMember" id="secondE"><a href="#">About Us</a></li>
+				<li class="myFlexMember" id="thirdE"><a href="#">Login</a></li>
+				<li class="myFlexMember" id="fourthE"><a href="#">Contact Us</a></li>
+				<li class="myFlexMember" id="fifthE"><a href="#">Our Services</a></li>
+			</ul>
+		</div>
+	</header>
+	<div class="justToFun colorSuccess" id="taskTag">Customer Account Opening Request Form</div>
+	<main id="formMain" class="myFlexDisplay">
+		<div id="formDiv">
+			<form>
+				<fieldset class="commonFieldset">
+					<legend class="commonLegend">Personal Information</legend>
+
+					<!-- Name -->
+					<div class="eachContainer flexClass" id="nameFlex">
+						<section class="flexMember">
+							<p class="commonP">First Name</p>
+							<input type="text" class="commonInput compulsory" id="firstName">
+							<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+						</section>
+						<section class="flexMember">
+							<p class="commonP">Middle Name</p>
+							<input type="text" class="commonInput" id="middleName">
+						</section>
+						<section class="flexMember">
+							<p class="commonP">Last Name</p>
+							<input type="text" class="commonInput compulsory" id="lastName">
+							<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+						</section>
+					</div><br>
+					
+					<!-- Gender -->
+
+					<div class="eachContainer">
+						<p class="commonP">Gender</p>
+						<select name="gender" id="genderSelect" class="selection">
+							<option value="Male" class="genderOption">Male</option>
+							<option value="Female" class="genderOption">Female</option>
+						</select>
+					</div><br>
+
+					<!-- Date Of Birth -->
+
+					<div class="eachContainer flexClass">
+						<section id="daySec" class="flexMember">
+							<p class="commonP">Day</p>
+							<input type="text" class="commonInput compulsory onlyNumber" id="day">
+							<span class="commonSpan myVisibilityHidden">*Please fill</span>
+						</section>
+						<section id="monthSec" class="flexMember">
+							<p class="commonP">Month</p>
+							<select name="month" id="month" class="selection">
+								<option value="01">January</option>
+								<option value="02">February</option>
+								<option value="03">March</option>
+								<option value="04">April</option>
+								<option value="05">May</option>
+								<option value="06">June</option>
+								<option value="07">July</option>
+								<option value="08">August</option>
+								<option value="09">September</option>
+								<option value="10">October</option>
+								<option value="11">November</option>
+								<option value="12">December</option>
+							</select>
+						</section>
+						<section id="yearSec" class="flexMember">
+							<p class="commonP">Year</p>
+							<input type="text" class="commonInput compulsory onlyNumber" id="year">
+							<span class="commonSpan myVisibilityHidden">*Please fill</span>
+						</section>
+					</div><br>
+
+					<!-- Address -->
+
+					<div class="eachContainer">
+						<p class="commonP">Address</p>
+						<div class="flexClass">
+							<section class="flexMember">
+								<input type="text" class="commonInput compulsory" placeholder="House No. Street Name" id="house">
+								<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+							</section>
+							<section class="flexMember">
+								<input type="text" class="commonInput compulsory" placeholder="Town" id="town">
+								<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+							</section>
+							<section class="flexMember">
+								<input type="text" class="commonInput compulsory" placeholder="City" id="city">
+								<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+							</section>
+						</div><br>
+						<div class="flexClass">
+							<section class="flexMember">
+								<input type="text" class="commonInput compulsory" placeholder="District" id="district">
+								<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+							</section>
+							<section class="flexMember">
+								<input type="text" class="commonInput compulsory" placeholder="State" id="state">
+								<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+							</section>
+							<section class="flexMember">
+								<input type="text" class="commonInput compulsory onlyNumber" placeholder="Pin Code" id="pinCode">
+								<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+							</section>
+						</div>
+					</div><br>
+
+					<!-- Mobile -->
+
+					<div class="eachContainer">
+						<p class="commonP">Mobile</p>
+						<input type="text" class="commonInput compulsory onlyNumber" id="mobile">
+						<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+					</div><br>
+					<!-- Email -->
+					
+					<div class="eachContainer">
+						<p class="commonP">Email</p>
+						<input type="text" class="commonInput compulsory" id="email">
+						<span class="commonSpan myVisibilityHidden">*Please enter correct Email</span>
+					</div><br>
+
+					<!-- Account Type -->
+
+					<div class="eachContainer">
+						<p class="commonP">Account Type</p>
+						<select name="accountType" id="accountType" class="selection">
+							<option value="Savings Account" class="accountType">Savings Account</option>
+							<option value="Current Account" class="accountType">Current Account</option>
+						</select>
+					</div><br>
+
+					<!-- Button -->
+					<button id="getRefBtn" type="button" class="myButton">Get Reference No.</button>
+					<br>
+					<!-- <span class="commonSpan myShow"></span> -->
+				</fieldset>
+				<div id="queryResult" class="myHidden"></div>
+			</form>
+		</div>
+		<div></div>
+	</main>
+
+	<footer></footer>
+	<!-- <script src="../JS/jquery-3.2.1.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+	<!-- <script src="../JS/RegistrationJS.js"></script> -->
+	<script src="../JS/myCustom.js"></script>
+	<script src="../JS/AJAX/referenceNumber.js"></script>
+	<script src="../JS/RegistrationPageJS.js"></script>
+</body>
+</html>

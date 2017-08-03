@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LogIn</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css"> -->
+  	<link rel="stylesheet" href="../CSS/myCustom.css">
+  	<link rel="stylesheet" href="../CSS/LogInPageCSS.css">
+</head>
+<body>
+	<header>
+		<div></div>
+		<div>
+			<ul id="myMenuUl" class="myFlexContainer myUlMenu">
+				<li class="myFlexMember myFlexMemberActive" id="firstE"><a href="#">Home</a></li>
+				<li class="myFlexMember" id="secondE"><a href="#">About Us</a></li>
+				<li class="myFlexMember" id="thirdE"><a href="#">FAQs</a></li>
+				<!-- <li class="myFlexMember" id="fourthE"><a href="#">Contact Us</a></li>
+				<li class="myFlexMember" id="fifthE"><a href="#">Our Services</a></li> -->
+			</ul>
+		</div>
+	</header>
+
+	<!-- LogIn Section -->
+	
+	<p id="warningTag">Please see DO's and DONT's below</p>
+
+	<p id="indicatorTag">LogIn To My Bank Name</p>
+
+	<div class="myFlexDisplay" id="loginSection">
+		<div id="loginPart" class="myFlexDisplay">
+			<section class="loginPartSec">
+				<form action="" id="loginForm">
+					<p class="commonPara" id="userText">Username</p>
+					<input type="text" class="commonInput">
+					<p class="commonPara" id="passText">Password</p>
+					<input type="password" class="commonInput">
+					<input type="submit" id="loginSubmitBtn" value="Login">
+					<a href="#">Forget Password?</a>
+				</form>
+			</section>
+			<section class="loginPartSec">
+				<a href="RegistrationPage.html" class="commonAnchor">New Customer Registration</a>
+				<a href="ConfirmRegistrationPage.html" class="commonAnchor">Confirm Registration</a>
+				<a href="#" class="commonAnchor">Anchor 3</a>
+			</section>
+		</div>
+		<aside id="loginAside">
+			<img src="" id="loginAsideImage" class="totalHW">
+		</aside>
+	</div>
+
+	<!-- Do's And Dont's Section -->
+
+	<div id="dndContainer" class="myFlexDisplay">
+		<section class="dndSection">
+			<div class="myFlexDisplay totalWidth">
+				<div class="dndImageContainer totalHeight">
+					<img src="../Images/Do.png">
+				</div>
+				<p class="noMargin totalHeight colorSuccess">DO's</p>
+			</div>
+			<p class="noMargin colorInfo">Always keep your computer free from malware</p>
+		</section>
+		<section class="dndSection">
+			<div class="myFlexDisplay totalWidth">
+				<div class="dndImageContainer totalHeight">
+					<img src="../Images/Do.png">
+				</div>
+				<p class="noMargin totalHeight colorSuccess">DO's</p>
+			</div>
+			<p class="noMargin colorInfo">Always change your password periodically</p>
+		</section>
+		<section class="dndSection">
+			<div class="myFlexDisplay totalWidth">
+				<div class="dndImageContainer totalHeight">
+					<img src="../Images/Dont.png">
+				</div>
+				<p class="noMargin totalHeight colorWarning">DONT's</p>
+			</div>
+			<p class="noMargin colorInfo">Never respond to any communication 
+			seeking your passwords</p>
+		</section>
+		<section class="dndSection">
+			<div class="myFlexDisplay totalWidth">
+				<div class="dndImageContainer totalHeight">
+					<img src="../Images/Dont.png">
+				</div>
+				<p class="noMargin totalHeight colorWarning">DONT's</p>
+			</div>
+			<p class="noMargin colorInfo">Never reveal your passwords or 
+			card details to anyone</p>
+		</section>
+	</div>
+
+	<footer class="totalWidth">
+		
+	</footer>
+	<script src="../JS/jquery-3.2.1.js"></script>
+	<!-- <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+	<script src="../JS/LogInPageJS.js"></script>
+	<!-- <script src="../JS/myCustom.js"></script> -->
+</body>
+</html>

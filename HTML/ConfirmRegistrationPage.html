@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css"> -->
+  	<link rel="stylesheet" href="../CSS/myCustom.css">
+  	<link rel="stylesheet" href="../CSS/ConfirmRegistrationPageCSS.css">
+</head>
+<body>
+	<header>
+		<div></div>
+		<div>
+			<ul id="myMenuUl" class="myFlexContainer myUlMenu">
+				<li class="myFlexMember myFlexMemberActive" id="firstE"><a href="#">Home</a></li>
+				<li class="myFlexMember" id="secondE"><a href="LogInPage.html">Login</a></li>
+				<li class="myFlexMember" id="thirdE"><a href="#">About Us</a></li>
+				<li class="myFlexMember" id="fourthE"><a href="#">FAQs</a></li>
+				<!-- <li class="myFlexMember" id="fourthE"><a href="#">Contact Us</a></li>
+				<li class="myFlexMember" id="fifthE"><a href="#">Our Services</a></li> -->
+			</ul>
+		</div>
+	</header>
+	<div class="justToFun colorSuccess" id="taskTag">Account Confirmation Form</div>
+	<main id="formMain" class="myFlexDisplay">
+		<div id="formDiv">
+			<div id="beginRegDiv">
+				<div class="myFlexDisplay">
+					<div class="eachContainer">
+						<p class="commonP">Enter Reference Number</p>
+						<input type="text" class="commonInput compulsory" id="referenceNumber"><br>
+						<span class="commonSpan myVisibilityHidden">*Please enter correct Email</span>
+					</div>
+					<div class="eachContainer">
+						<p class="commonP">Your Account Number</p>
+						<input type="text" class="commonInput commonDisabledInput" id="fetchedAccountNumber" disabled="true"><br>
+						<span class="commonSpan myVisibilityHidden"></span>
+					</div>
+				</div>
+				<button type="button" id="getAccountNumberBtn" class="myButton">Get Account Number</button>
+			</div>
+			<form>
+				<fieldset class="commonFieldset">
+					<legend id="accountInfo" class="commonLegend">Account Infromation</legend>
+
+					<div class="eachContainer">
+						<p class="commonP">Account Number</p>
+						<input type="text" class="commonInput commonDisabledInput" id="permanentAccountNumber" disabled="true">
+						<span class="commonSpan myVisibilityHidden"></span>
+					</div><br>
+
+					<div class="eachContainer">
+						<p class="commonP">Branch Name</p>
+						<input type="text" class="commonInput commonDisabledInput" id="branchName" disabled="true">
+						<span class="commonSpan myVisibilityHidden"></span>
+					</div><br>
+
+					<div class="eachContainer">
+						<p class="commonP">Branch Code</p>
+						<input type="text" class="commonInput commonDisabledInput" id="branchCode" disabled="true">
+						<span class="commonSpan myVisibilityHidden"></span>
+					</div><br>
+
+					<div class="eachContainer">
+						<p class="commonP">IFCS Code</p>
+						<input type="text" class="commonInput commonDisabledInput" id="ifscCode" disabled="true">
+						<span class="commonSpan myVisibilityHidden"></span>
+					</div><br>
+
+				</fieldset>
+
+				<fieldset class="commonFieldset">
+					<legend id="loginInfo" class="commonLegend">Login Information</legend>
+
+					<div class="eachContainer">
+						<p class="commonP">Username</p>
+						<input type="text" class="commonInput compulsory commonDisabledInput" disabled="true" id="userName">
+						<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+					</div><br>
+
+					<div class="eachContainer">
+						<p class="commonP">Password</p>
+						<input type="text" class="commonInput compulsory commonDisabledInput" disabled="true" id="password">
+						<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+					</div><br>
+
+					<div class="eachContainer">
+						<p class="commonP">Confirm Password</p>
+						<input type="text" class="commonInput compulsory commonDisabledInput" disabled="true" id="confirmPassword">
+						<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+					</div><br>
+
+					<button type="button" id="openAccountBtn" class="commonDisabledInput myButton">Open Account Number</button>
+				</fieldset>
+
+			</form>
+		</div>
+	</main>
+	<footer></footer>
+	<!-- <script src="../JS/jquery-3.2.1.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+	<script src="../JS/myCustom.js"></script>
+	<script src="../JS/ConfirmRegistrationPageJS.js"></script>
+</body>
+</html>

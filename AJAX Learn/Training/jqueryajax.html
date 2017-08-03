@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery ajax</title>
+	<script src="js/jQuery-3.2.1.js"></script>
+</head>
+<body>
+<button type="button" id="btn">click</button>
+<div id="demo"></div>
+
+<script>
+
+	function callB(responseTxt, statusTxt, xhr){
+        if(statusTxt == "success")
+            alert("External content loaded successfully!");
+        if(statusTxt == "error")
+            alert("Error: " + xhr.status + ": " + xhr.statusText);
+    }
+
+    $("#btn").click(function(){
+        $("#demo").load("data2.html #h2", callB);
+    });
+
+//  $("#btn").click(function(){
+//     $.get("AJAXDATA.txt", function(data, status){
+//         var response1= data;
+//         $("#demo").text(response1);
+//     });
+// });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+#genderSelect{
+	width:10%;
+}
+#daySec{
+	width:15%;
+}
+input{
+	display:block;
+}
+#yearSec{
+	width:15%;
+	margin-left:40px;
+}
+#monthSec{
+	width:15%;
+	margin-left:40px;
+}
+#daySec>input{
+	width:100%;
+}
+#monthSec>select{
+	width:100%;
+}
+#yearSec>input{
+	width:100%;
+}
+#dobFlex{
+	width:30%;
+	margin-left:48px;
+}
+#email{
+	width:50%;
+}
+button{
+	height:40px;
+	width:20%;
+	margin-left:30px;
+	text-align:center;
+	font-size:20px;
+	font-weight:bold;
+	line-height:40px;
+}
+#sendMailBtn{
+	margin-top:20px;
+	margin-bottom:20px;
+	height:40px;
+	width:30%;
+	font-size:20px;
+	border-radius:10px;
+	outline:none;
+	background:#5ea559;
+	color:white;
+	border:2px solid white;
+	box-shadow:0px 5px 5px grey;
+	transition:all 0.05s 0s;
+	cursor:pointer;
+}
+#sendMailBtn:active{
+	transform:translateY(5px);
+	box-shadow:0px 0px 5px grey;
+	outline:none;
+}
+.buttonDisabled{
+	background:grey;
+	cursor:not-allowed;
+}
+footer{
+	width:100%;
+	height:100px;
+	border-top:4px solid lightgrey;
+}
+.myVisibilityHidden{
+	visibility:hidden;
+}

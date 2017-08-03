@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+  	<link rel="stylesheet" href="../CSS/oldRegistrationCSS.css">
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Personal Details</legend>
+
+
+			<div id="name_details" class="inline_common">
+				<section>
+					<p>First Name</p>
+					<input type="text" name="first" id="first">
+				</section>
+				<section>
+					<p>Middle Name</p>
+					<input type="text" name="middle">
+				</section>
+				<section>
+					<p>Last Name</p>
+					<input type="text" name="last">
+				</section>
+			</div>
+			<span id="nameSpan">*Please Fill This Entry</span><br>
+
+
+			<div id="gender">
+				<p>Gender</p>
+				<input type="radio" name="gender" value="male">Male<br>
+				<input type="radio" name="gender" value="Female" checked="true">Female
+			</div><br>
+
+
+			<div class="inline_common" id="dob_details">
+				<section>
+					<p>Day</p>
+					<input type="text" name="day" class="dob" id="day">
+				</section>
+				<section>
+					<p>Month</p>
+					<section id="month_sec"><span id="nameMonth">--Select--</span>
+						<ul id="month_ul">
+							<li>January</li>
+							<li>February</li>
+							<li>March</li>
+							<li>April</li>
+							<li>May</li>
+							<li>June</li>
+							<li>July</li>
+							<li>August</li>
+							<li>September</li>
+							<li>October</li>
+							<li>November</li>
+							<li>December</li>
+						</ul>
+						<span id="monthSpan">+</span>
+					</section>
+				</section>
+				<section>
+					<p>Year</p>
+					<input type="text" name="year" class="dob" id="year">
+				</section>
+			</div><br>
+
+
+			<div id="address">
+				<p>Address</p>
+				<div id="name_details" class="inline_common">
+					<section>
+						<input type="text" name="houseno" placeholder="House No. Street Name">
+					</section>
+					<section>
+						<input type="text" name="town" placeholder="Town">
+					</section>
+					<section>
+						<input type="text" name="city" placeholder="City">
+					</section>
+				</div><br>
+				<div id="name_details" class="inline_common">
+					<section>
+						<input type="text" name="district" placeholder="District">
+					</section>
+					<section>
+						<input type="text" name="state" placeholder="State">
+					</section>
+					<section>
+						<input type="text" name="postalcode" placeholder="PinCode" id="pincode">
+					</section>
+				</div>
+			</div><br>
+
+
+			<div id="mobile_number" class="mobacc_number">
+				<p>Mobile Number</p>
+				<input type="text" name="mobile" id="mobile">
+				<span id="mobileSpan">*Please Enter This Field</span>
+			</div><br>
+
+
+			<div>
+				<p>Email</p>
+				<input type="text" name="email" id="email">
+				<span id="emailSpan">*Please Enter Correct Email</span>
+			</div><br>
+
+
+			<button type="button" id="sendEmail">Send Email</button>
+		</fieldset>
+
+		<fieldset>
+			<legend id="accountInfo">Account Infromation</legend>
+
+			<div class="mobacc_number">
+				<p>Account Number</p>
+				<input type="text" name="accountNumber" id="accountNumber">
+				<span id="accountSpan">*Please Enter This Field</span>
+			</div><br>
+
+			<div class="mobacc_number">
+				<p>Branch Name</p>
+				<input type="text" name="branch" id="branch">
+			</div><br>
+
+			<div class="mobacc_number">
+				<p>Branch Code</p>
+				<input type="text" name="branchCode" id="branchCode">
+			</div><br>
+
+			<div class="mobacc_number">
+				<p>IFSC Code</p>
+				<input type="text" name="ifsc" id="ifsc">
+			</div><br>
+		</fieldset>
+
+		<fieldset>
+			<legend id="loginInfo">Log In Information</legend>
+
+			<div class="mobacc_number">
+				<p>User Name</p>
+				<input type="text" name="user" id="user">
+			</div><br>
+
+			<div class="mobacc_number">
+				<p>Password</p>
+				<input type="text" name="password" id="password">
+			</div><br>
+
+			<div class="mobacc_number">
+				<p>Confirm Password</p>
+				<input type="text" name="confirmPassword" id="confirmPassword">
+			</div><br>
+			<div>
+				<p>Security Question 1</p>
+				<section id="securityQues"><span id="securityQuesSpan">--Select--</span>
+					<ul id="securityQuesUl">
+						<li class="oneEle">What is your first school name?</li>
+						<li class="twoEle">What is your Father's middle name?</li>
+						<li class="threeEle">What is your Mother's last name?</li>
+						<li class="fourEle">What is your Favourite teaches's name?</li>
+						<li class="fiveEle">What is your Favourite book title?</li>
+					</ul>
+				</section><br>
+				<input type="text" name="answerSecurityQues" id="answerSecurityQues" placeholder="Your Answer">
+			</div><br>
+
+			<div>
+				<p>Security Question 2</p>
+				<section id="securityQues1"><span id="securityQuesSpan1">--Select--</span>
+					<ul id="securityQuesUl1">
+						<li class="oneEle">What is your first school name?</li>
+						<li class="twoEle">What is your Father's middle name?</li>
+						<li class="threeEle">What is your Mother's last name?</li>
+						<li class="fourEle">What is your Favourite teaches's name?</li>
+						<li class="fiveEle">What is your Favourite book title?</li>
+					</ul>
+				</section><br>
+				<input type="text" name="answerSecurityQues1" id="answerSecurityQues1" placeholder="Your Answer">
+				<span id="errorQues">*Please Choose Different Question</span>
+			</div>
+		</fieldset>
+		<input type="submit" name="submit" value="Register Account" id="submit">
+	</form>
+	<footer></footer>
+	<script src="../JS/jquery-3.2.1.js"></script>
+	<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+	<script src="../JS/oldRegistrationJS.js"></script>
+</body>
+</html>

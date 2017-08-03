@@ -1,0 +1,86 @@
+#formDiv{
+	width:80%;
+	background:#f2f2f2;
+}
+form{
+	width:100%;
+	margin-top:0;
+	position:relative;
+}
+#formMain{
+	height:1090px;
+	/*border:2px solid grey;*/
+}
+#formMain>div:last-of-type{
+	height:100%;
+	width:40%;
+	box-sizing:border-box;
+	border-left:2px solid grey;
+}
+#taskTag{
+	font-size:20px;
+	font-weight:bold;
+	line-height:50px;
+	text-indent:20px;
+	text-transform:uppercase;
+}
+
+#genderSelect{
+	width:15%;
+}
+#daySec{
+	width:15%;
+}
+input{
+	display:block;
+}
+#yearSec{
+	width:15%;
+	margin-left:40px;
+}
+#monthSec{
+	width:15%;
+	margin-left:40px;
+}
+#daySec>input{
+	width:100%;
+}
+#monthSec>select{
+	width:100%;
+}
+#yearSec>input{
+	width:100%;
+}
+#dobFlex{
+	width:30%;
+	margin-left:48px;
+}
+#email{
+	width:50%;
+}
+#getRefBtn{
+	height:40px;
+	width:30%;
+	margin-top:20px;
+	margin-bottom:20px;
+	margin-left:30px;
+}
+.buttonDisabled{
+	background:grey;
+	cursor:not-allowed;
+}
+footer{
+	/*margin-top:10px;*/
+	width:100%;
+	height:100px;
+	border-top:4px solid lightgrey;
+}
+#queryResult{
+	position:absolute;
+	top:100%;
+	left:10%;
+	width:80%;
+	height:70px;
+	font-size:18px;
+	text-align:center;
+}

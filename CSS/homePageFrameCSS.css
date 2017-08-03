@@ -1,0 +1,11 @@
+.slider{
+	height:400px;
+}
+img{
+	display:inline-block;
+}
+footer{
+	height:200px;
+	width:100%;
+	border:2px solid green;
+}

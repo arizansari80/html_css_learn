@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Intro</title>
+	<style>
+		ul{
+			border:1px solid black;
+			background-color: #ccc;
+		}
+		ul>li{
+			color:white;
+			font-size: 32px;
+			font-weight: bold;
+			font-family: monospace;
+		} 
+		label{width: 100px; display: inline-block; margin-bottom: 15px;}
+	</style>
+</head>
+<body>
+<ul id="ul1">
+<li>some text</li>
+</ul>
+<button type="button" id="btn1">click to load</button>
+<!-- <form id="f1" name="form">
+	<label for="uname">Name:</label><input type="text" name="fname" id="uname" /><br>
+	<label for="uage">Age:</label><input type="number" name="age1" id="uage" />
+</form>
+
+<button type="button" id="btn2">click to add content</button>
+ -->
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+$(document).ready(function(){
+	
+
+$("#btn1").click(function(){
+	var ul1=$("#ul1");
+	$.ajax({
+		type:"GET",
+		url:"data.json",
+		dataType:"json",
+		success:function(data){
+			$.each(data,function(i,val){
+				var d=[val];
+				$.each(d,function(c,ret){
+					ul1.append("<li>Name: "+ret.name+", Age:"+ret.age+" </li>");
+				});
+			});
+		},
+		error:function(jqXHR,textStatus,error){
+			//alert("plese check, something goes wrong!!");
+			//console.log(jqXHR.status);
+			//console.log(textStatus);
+			//console.log(error);
+	        var msg = '';
+	        if (jqXHR.status === 0) {
+	            msg = 'Not connect.\n Verify Network.';
+	        } else if (jqXHR.status == 404) {
+	            msg = 'Requested page not found. [404]';
+	        } else if (jqXHR.status == 500) {
+	            msg = 'Internal Server Error [500].';
+	        } else if (exception === 'parsererror') {
+	            msg = 'Requested JSON parse failed.';
+	        } else if (exception === 'timeout') {
+	            msg = 'Time out error.';
+	        } else if (exception === 'abort') {
+	            msg = 'Ajax request aborted.';
+	        } else {
+	            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+	        }
+	        alert(msg);
+		}
+	});
+
+	
+
+	
+	// $.getJSON("data.json",function(data){
+	// 	$.each(data,function(i,val){
+	// 		var d=[val];
+	// 		$.each(d,function(c,ret){
+	// 			ul1.append("<li>Name: "+ret.name+", Age:"+ret.age+" </li>");
+	// 		});
+	// 	});
+	// });
+	
+});
+
+// $("#btn2").click(function(){
+// 		var added={
+// 			name: $("#uname").val(),
+// 			age: $("age1").val()
+// 		};
+		
+// 		$.ajax({
+// 			type:"POST",
+// 			url:"data.json",
+// 			data: added,
+// 			success:function(){
+// 				$.each(data,function(i,val){
+// 				var d=[val];
+// 				$.each(d,function(c,ret){
+// 					ul1.append("<li>Name: "+ret.name+", Age:"+ret.age+" </li>");
+// 				});
+// 			});	
+// 			}
+// 		});
+// 	});
+ })
+	
+
+
+</script>
+</body>
+</html>

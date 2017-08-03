@@ -1,0 +1,16 @@
+Database Name
+	Permanent Database: ibsnetbanking
+
+Tables
+
+	1. Reference Number To Account Number:	referenceNumber
+
+
+Database Name
+	Temporary Information Database: tempibs
+
+Tables
+	
+	1. Temporary Reference Number To Temporary Account Number: tempRefNum
+
+	2. Temporary Cusomer Info: tempCustInfo
