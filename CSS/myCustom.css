@@ -365,3 +365,7 @@ fieldset>div{
 .notAllowedInput{
 	background:lightgrey;
 }
+
+footer::after{
+	content:"\00a9 Muhammad Ariz Ansari All The Content are Copy Righted";
+}
