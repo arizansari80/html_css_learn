@@ -26,11 +26,11 @@ function getReference(){
 			console.log(myObj);
 			if(myObj.status.localeCompare("Successfull")==0){
 				result.className="myShow bgSuccess colorSuccess";
-				result.innerText="Account Request "+myObj.status+" & your Reference Number is "+myObj.refN+" Please Note Down your Reference Number for future Use It's Important";
+				result.innerText="Account Request "+myObj.status+" & your Reference ID is "+myObj.refID+" Please Note Down your Reference Number for future Use It's Important";
 				queryResult.style.lineHeight="35px";
 			}
 			else{
-				if(myObj.refN!=0){
+				if(myObj.refID!=0){
 					var delRef=new XMLHttpRequest();
 
 					delRef.onreadystatechange=function () {
@@ -38,7 +38,7 @@ function getReference(){
 							console.log(this.responseText);
 						}
 					}
-					delRef.open("POST","../PHP/AJAX/delReferenceNumber.php?q="+myObj.refN,true);
+					delRef.open("POST","../PHP/AJAX/delReferenceID.php?q="+myObj.refN,true);
 					delRef.send();
 				}
 				result.className="myShow bgWarning colorWarning";
@@ -53,6 +53,6 @@ function getReference(){
 
 	// console.log(arrJSON);
 
-	ajaxHttp.open("POST","../PHP/AJAX/referenceNumber.php?q="+arrJSON,true);
+	ajaxHttp.open("POST","../PHP/AJAX/referenceID.php?q="+arrJSON,true);
 	ajaxHttp.send();
 }
