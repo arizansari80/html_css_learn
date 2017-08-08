@@ -26,7 +26,7 @@ function getReference(){
 			console.log(myObj);
 			if(myObj.status.localeCompare("Successfull")==0){
 				result.className="myShow bgSuccess colorSuccess";
-				result.innerText="Account Request "+myObj.status+" & your Reference ID is "+myObj.refID+" Please Note Down your Reference Number for future Use It's Important";
+				result.innerText="Account Request "+myObj.status+" & your Reference ID is "+myObj.refID+" Please Note Down your Reference ID for future Use It's Important";
 				queryResult.style.lineHeight="35px";
 			}
 			else{

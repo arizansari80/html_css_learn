@@ -15,10 +15,24 @@ function getAccountNumber(){
 			var myObj=JSON.parse(this.responseText);
 			console.log(myObj);
 			var accn=document.getElementById('fetchedAccountNumber');
-			if(myObj.status.localeCompare('Success')==0)
+			if(myObj.status.localeCompare('Success')==0){
+				console.log(myObj);
 				accn.value=myObj.accN;
-			else
+			}
+			else{
+				if(myObj.accN!=0){
+					var delAcc=new XMLHttpRequest();
+
+					delAcc.onreadystatechange=function () {
+						if(this.readyState==4&&this.status==200){
+							console.log(this.responseText);
+						}
+					}
+					delAcc.open("POST","../PHP/AJAX/delMakeAccount.php?q="+refIDSend,true);
+					delAcc.send();
+				}
 				accn.value="Error";
+			}
 		}
 	}
 }
