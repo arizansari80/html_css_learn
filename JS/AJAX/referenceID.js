@@ -23,6 +23,7 @@ function getReference(){
 		if(this.readyState==4&&this.status==200){
 			var result=document.getElementById('queryResult');
 			var myObj=JSON.parse(this.responseText);
+			console.log(this.responseText);
 			console.log(myObj);
 			if(myObj.status.localeCompare("Successfull")==0){
 				result.className="myShow bgSuccess colorSuccess";

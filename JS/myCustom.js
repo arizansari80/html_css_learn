@@ -142,3 +142,39 @@ var email=document.getElementById('email');
 	}
 }
 /* Form Validator End*/
+
+/*Menu Bar Click Effect on Items*/
+var menuBar=document.getElementsByClassName('showClickEffect');
+if(menuBar){
+	var items=$('ul.showClickEffect li');
+	var first;
+	var preAct;
+	var z=-1;
+	items.each(function(){
+		this.addEventListener('click',toActivate);
+		z=this.className.indexOf("ctive")
+		if(z!=-1){
+			first=$(this);
+			preAct=this.id;
+		}
+	});
+	var k=-1;
+	var clsStr=first.attr("class").split(' ');
+	for (var i = 0; i < clsStr.length; i++) {
+		if(clsStr[i].indexOf('ctive')!=-1){
+			k=i;
+			break;
+		}
+	}
+	if(k!=-1)
+		clsStr=clsStr[k];
+	function toActivate(){
+		var obj=$(this);
+		obj.addClass(clsStr);
+		var pre=$('#'+preAct);
+		pre.removeClass(clsStr);
+		preAct=this.id;
+	}
+}
+
+/*Menu Bar Click Effect on Items Ends*/

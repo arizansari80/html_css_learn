@@ -40,12 +40,12 @@
 	margin:0 auto;
 }
 #loginPart{
-	width:50%;
+	width:55%;
 	height:350px;
 	/*border:2px solid green;*/
 }
 #loginAside{
-	width:50%;
+	width:45%;
 	height:100%;
 	/*border:2px solid green;*/
 }
@@ -63,8 +63,10 @@
 	/*border:2px solid blue;*/
 }
 #loginForm{
+	width:95%;
 	margin-left:5%;
 	margin-top:10%;
+	margin-right:0;
 }
 .commonPara{
 	height:50px;

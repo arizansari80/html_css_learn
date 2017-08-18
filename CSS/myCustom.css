@@ -2,8 +2,8 @@
 
 body{
 	margin-top:0;
-	margin-left:10%;
-	margin-right:10%;
+	margin-left:5%;
+	margin-right:5%;
 	box-shadow:0px 20px 20px grey;
 }
 header{
@@ -206,7 +206,7 @@ ul{
 
 .myFlexDisplay{
 	display:flex;
-	justify-content:space-between;
+	/*justify-content:space-between;*/
 }
 
 
@@ -306,7 +306,6 @@ fieldset>div{
 	background:linear-gradient(#e6e6e6,#f2f2f2 10%,#faf6f6,#e6e6e6 90%);
 }
 
-/*Color Classes*/
 .totalHeight{
 	height:100%;
 }
@@ -320,6 +319,8 @@ fieldset>div{
 .noMargin{
 	margin:0;
 }
+
+/*Color Classes*/
 .colorWarning{
 	color:red;
 }
@@ -340,6 +341,11 @@ fieldset>div{
 	background:#ccffcc;
 	border:1px solid #009900;
 	border-radius:5px;
+}
+.bgSuccessHard{
+	background:#4dff4d;
+	border:1px solid #009900;
+	border-radius:5px;		
 }
 
 /*Button Classes*/
