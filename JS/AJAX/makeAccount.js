@@ -21,7 +21,7 @@ function getAccountNumber(){
 			console.log(myObj);
 			var accn=document.getElementById('fetchedAccountNumber');
 			if(myObj.status.localeCompare('Success')==0){
-				console.log(myObj);
+				// console.log(myObj);
 				accn.value=myObj.accN;
 				document.getElementById('permanentAccountNumber').value=myObj.accN;
 				document.getElementById('branchName').value=myObj.BName;
@@ -38,19 +38,48 @@ function getAccountNumber(){
 				openAccBtn.style.cursor="";
 				openAccBtn.style.background="#5ea559";
 			}
-			else{
-				if(myObj.accN!=0){
-					var delAcc=new XMLHttpRequest();
-
-					delAcc.onreadystatechange=function () {
-						if(this.readyState==4&&this.status==200){
-							console.log(this.responseText);
-						}
-					}
-					delAcc.open("POST","../PHP/AJAX/delMakeAccount.php?q="+refIDSend,true);
-					delAcc.send();
-				}
+			else
 				accn.value="Error";
+		}
+	}
+}
+
+openAccountBtn.addEventListener('click',openAccountFunction);
+
+function openAccountFunction(e){
+	var ajaxHttp=new XMLHttpRequest();
+	var accInfo={
+		recvRef:document.getElementById('referenceID').value,
+		accountNumber:document.getElementById('permanentAccountNumber').value,
+		user:document.getElementById('userName').value,
+		password:document.getElementById('password').value
+	}
+	var jobj=JSON.stringify(accInfo);
+	ajaxHttp.open('POST','../PHP/AJAX/registerAccount.php?q='+jobj,true);
+	ajaxHttp.send();
+
+	ajaxHttp.onreadystatechange=function(){
+		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
+			var result=document.getElementById('queryResult');
+			var myObj=JSON.parse(this.responseText);
+			console.log(myObj);
+			if(myObj.status.localeCompare("Successfull")==0){
+				result.className="myVisibilityShow bgSuccess colorSuccess";
+				result.innerText="Account Open Successfully";
+				queryResult.style.lineHeight="70px";
+				var inp=$('input');
+				inp.each(function(i){
+					this.disabled=true;
+				});
+				var btn=$('button');
+				btn.each(function(i){
+					this.disabled=true;
+				});
+			}
+			else{
+				result.className="myShow bgWarning colorWarning";
+				result.innerText="Service is temporary unavailabe";
+				queryResult.style.lineHeight="70px";
 			}
 		}
 	}

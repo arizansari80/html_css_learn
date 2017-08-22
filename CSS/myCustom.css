@@ -221,6 +221,10 @@ ul{
 	visibility:hidden;
 }
 
+.myVisibilityShown{
+	visibility:show;	
+}
+
 /*Form Styling*/
 
 form{
@@ -329,6 +333,11 @@ fieldset>div{
 }
 .colorInfo{
 	color:#0047b3;
+}
+
+/*Font Weight*/
+.giveBold{
+	font-weight:bold;
 }
 
 /*Background Colour*/

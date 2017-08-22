@@ -12,11 +12,11 @@
 	<header>
 		<div></div>
 		<div>
-			<ul id="myMenuUl" class="myFlexContainer myUlMenu">
-				<li class="myFlexMember myFlexMemberActive" id="firstE"><a href="#">Home</a></li>
-				<li class="myFlexMember" id="secondE"><a href="LogInPage.html">Login</a></li>
-				<li class="myFlexMember" id="thirdE"><a href="#">About Us</a></li>
-				<li class="myFlexMember" id="fourthE"><a href="#">FAQs</a></li>
+			<ul id="myMenuUl" class="myFlexContainer myUlMenu showClickEffect">
+				<li class="myFlexMember myFlexMemberActive" id="1"><a href="#">Home</a></li>
+				<li class="myFlexMember" id="2"><a href="LogInPage.html">Login</a></li>
+				<li class="myFlexMember" id="3"><a href="#">About Us</a></li>
+				<li class="myFlexMember" id="4"><a href="#">FAQs</a></li>
 				<!-- <li class="myFlexMember" id="fourthE"><a href="#">Contact Us</a></li>
 				<li class="myFlexMember" id="fifthE"><a href="#">Our Services</a></li> -->
 			</ul>
@@ -81,25 +81,25 @@
 
 					<div class="eachContainer">
 						<p class="commonP">Password</p>
-						<input type="text" class="commonInput compulsory commonDisabledInput" disabled="true" id="password">
+						<input type="password" class="commonInput compulsory commonDisabledInput" disabled="true" id="password">
 						<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
 					</div><br>
 
 					<div class="eachContainer">
 						<p class="commonP">Confirm Password</p>
-						<input type="text" class="commonInput compulsory commonDisabledInput" disabled="true" id="confirmPassword">
-						<span class="commonSpan myVisibilityHidden">*Please fill this field</span>
+						<input type="password" class="commonInput compulsory commonDisabledInput" disabled="true" id="confirmPassword">
+						<span class="commonSpan myVisibilityHidden">*Password Does not match</span>
 					</div><br>
 
-					<button type="button" id="openAccountBtn" class="myButton">Open Account Number</button>
+					<button type="button" id="openAccountBtn" class="myButton">Open Account</button>
 				</fieldset>
-
 			</form>
 		</div>
 	</main>
+	<div id="queryResult" class="myVisibilityHidden"></div>
 	<footer></footer>
-	<!-- <script src="../JS/jquery-3.2.1.js"></script>
-	<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
+	<script src="../JS/jquery-3.2.1.js"></script>
+	<!-- <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
 	<script src="../JS/myCustom.js"></script>
 	<script src="../JS/ConfirmRegistrationPageJS.js"></script>
 	<script src="../JS/AJAX/makeAccount.js"></script>

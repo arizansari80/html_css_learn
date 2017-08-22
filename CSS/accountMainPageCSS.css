@@ -58,5 +58,39 @@ header>div:last-of-type{
 #mainContent{
 	width:85%;
 	border:2px solid darkgrey;
-	border-top-left-radius:50px;
+	border-top-left-radius:30px;
+}
+#mainContent>*{
+	margin-left:20px;
+}
+#infoTag{
+	font-weight:bold;
+	font-size:20px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.mainContentClass{
+	/*border:1px solid grey;*/
+	height:200px;
+	margin-right:10px;
+}
+.contentTable{
+	border:1px solid blue;
+	height:100%;
+	width:100%;
+}
+.categoryInfo>td:first-of-type{
+	font-weight:bold;
+	width:30%;
+}
+.categoryInfo>td:last-of-type{
+	width:70%;
+}
+.mainContentClass>p:first-of-type{
+	height:30px;
+	line-height:30px;
+	font-size:18px;
+	border-radius:0;
+	border:none;
+	color:blue;
 }

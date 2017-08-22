@@ -159,6 +159,7 @@ if(menuBar){
 		}
 	});
 	var k=-1;
+	console.log(preAct);
 	var clsStr=first.attr("class").split(' ');
 	for (var i = 0; i < clsStr.length; i++) {
 		if(clsStr[i].indexOf('ctive')!=-1){
@@ -170,10 +171,12 @@ if(menuBar){
 		clsStr=clsStr[k];
 	function toActivate(){
 		var obj=$(this);
-		obj.addClass(clsStr);
-		var pre=$('#'+preAct);
-		pre.removeClass(clsStr);
-		preAct=this.id;
+		if(this.id!=preAct){
+			obj.addClass(clsStr);
+			var pre=$('#'+preAct);
+			pre.removeClass(clsStr);
+			preAct=this.id;
+		}
 	}
 }
 
