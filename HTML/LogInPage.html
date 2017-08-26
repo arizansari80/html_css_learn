@@ -31,12 +31,14 @@
 	<div class="myFlexDisplay" id="loginSection">
 		<div id="loginPart" class="myFlexDisplay">
 			<section class="loginPartSec">
-				<form action="" id="loginForm">
+				<form action="../PHP/mainAccountPage.php" id="loginForm" method="POST">
 					<p class="commonPara" id="userText">Username</p>
-					<input type="text" class="commonInput">
+					<input type="text" class="commonInput" id="user" name="user">
 					<p class="commonPara" id="passText">Password</p>
-					<input type="password" class="commonInput">
-					<input type="submit" id="loginSubmitBtn" value="Login">
+					<input type="password" class="commonInput preventSpace" id="pass" name="pass">
+					<input type="text" style="display:none;" id="AccountNumber" name="acc">
+					<!-- <span class="commonSpan myVisibilityHidden">Incorrect</span> -->
+					<input type="button" id="loginSubmitBtn" value="Login">
 					<a href="#">Forget Password?</a>
 				</form>
 			</section>
@@ -101,6 +103,7 @@
 	<!-- <script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script> -->
 	<script src="../JS/myCustom.js"></script>
 	<script src="../JS/LogInPageJS.js"></script>
+	<script src="../JS/AJAX/LoginPageAJAX.js"></script>
 	<!-- <script src="../JS/myCustom.js"></script> -->
 </body>
 </html>

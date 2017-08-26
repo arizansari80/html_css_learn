@@ -71,10 +71,6 @@ function openAccountFunction(e){
 				inp.each(function(i){
 					this.disabled=true;
 				});
-				var btn=$('button');
-				btn.each(function(i){
-					this.disabled=true;
-				});
 			}
 			else{
 				result.className="myShow bgWarning colorWarning";

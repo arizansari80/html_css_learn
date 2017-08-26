@@ -181,3 +181,15 @@ if(menuBar){
 }
 
 /*Menu Bar Click Effect on Items Ends*/
+
+/*Prevent Space Function*/
+var spacePrevent=document.getElementsByClassName('preventSpace');
+if(spacePrevent){
+	for (var i = 0; i < spacePrevent.length; i++)
+		spacePrevent[i].addEventListener('keypress',preventSpace);
+
+	function preventSpace(e){
+		if(e.charCode==32)
+			e.preventDefault();
+	}
+}
