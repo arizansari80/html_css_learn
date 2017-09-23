@@ -159,7 +159,6 @@ if(menuBar){
 		}
 	});
 	var k=-1;
-	console.log(preAct);
 	var clsStr=first.attr("class").split(' ');
 	for (var i = 0; i < clsStr.length; i++) {
 		if(clsStr[i].indexOf('ctive')!=-1){
