@@ -71,6 +71,12 @@ header>div:last-of-type{
 
 /*Menu Maker*/
 
+/*Paragraph Link*/
+.paraLink{
+	cursor:pointer;
+	text-decoration:underline;
+}
+
 /*Slider Begin*/
 #mySliderDivContainer{
 	position:relative;
@@ -310,6 +316,10 @@ fieldset>div{
 	background:linear-gradient(#e6e6e6,#f2f2f2 10%,#faf6f6,#e6e6e6 90%);
 }
 
+/*Dimension Classes*/
+.halfWidth{
+	width:50%;
+}
 .totalHeight{
 	height:100%;
 }

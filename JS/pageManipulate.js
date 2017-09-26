@@ -17,10 +17,10 @@ function loadPage(){
 
 var toShowPage=["profilePage"];
 var profilePageLoad=document.getElementById('2');
-profilePageLoad.addEventListener('click',loadProfilePage);
+// profilePageLoad.addEventListener('click',loadProfilePage);
 
-function loadProfilePage(){
-	console.log("In Click 2");
-	document.getElementById('mainContent').innerHTML=document.getElementById('profilePage').innerHTML;
-	document.getElementsByTagName('head')[0].innerHTML=baseHead+"<link rel='stylesheet' href='../CSS/ProfilePageCSS.css'>";		
-}
+// function loadProfilePage(){
+// 	console.log("In Click 2");
+// 	document.getElementById('mainContent').innerHTML=document.getElementById('profilePage').innerHTML;
+// 	document.getElementsByTagName('head')[0].innerHTML=baseHead+"<link rel='stylesheet' href='../CSS/ProfilePageCSS.css'>";		
+// }

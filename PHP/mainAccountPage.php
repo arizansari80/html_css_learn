@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	  	<link rel="stylesheet" href="../CSS/myCustom.css">
 		<link rel="stylesheet" href="../CSS/accountMainPageCSS.css">
+		<link rel="stylesheet" href="../CSS/ProfilePageCSS.css">
 	</head>
 	<body>
 		<?php
@@ -56,7 +57,7 @@
 				<!-- ul.mainMenu>li.menuItem* -->
 			</nav>
 			<main id='mainContent' class='totalHeight'>
-				<p id='infoTag' class='colorInfo'>Account Summary</p>
+				<p class='infoTag colorInfo'>Account Summary</p>
 				<div class='mainContentClass'>
 					<p class='giveBold bgSuccess noMargin'>Account Details</p>
 					<table class='contentTable'>
@@ -97,7 +98,7 @@
 
 		<!-- Hidden Objects -->
 
-		<section class="myHidden" id="profilePage">
+		<!-- <section class="myHidden" id="profilePage">
 			<p id="infoTag" class="colorInfo">Account Profile</p>
 			<div class="mainContentClass">
 				<section>
@@ -108,7 +109,7 @@
 					<p class="colorWarning myHidden">*Wrong Password</p>
 				</section>	
 			</div>
-		</section>
+		</section> -->
 		<script src="../JS/jquery-3.2.1.js"></script>
 		<script src="../JS/myCustom.js"></script>
 		<!-- <script src="../JS/accountMainPageJS.js"></script> -->

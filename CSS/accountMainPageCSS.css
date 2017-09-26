@@ -63,7 +63,7 @@ header>div:last-of-type{
 #mainContent>*{
 	margin-left:20px;
 }
-#infoTag{
+.infoTag{
 	font-weight:bold;
 	font-size:20px;
 	margin-top:10px;
