@@ -89,6 +89,7 @@
 				</div>
 			</main>
 		</div>
+		<input type='number' id='masterAccountNumber' style='display:none'>
 		<footer></footer>";
 					print $abc;
 					// }
@@ -131,6 +132,9 @@
 				this.innerText=myObj[i++];
 			});
 			$('#userName')[0].innerText+=" "+myObj[1]+" ";
+			var localAccountNumber=document.getElementById('masterAccountNumber');
+			localAccountNumber.value=<?php print $accN?>;
+			console.log(localAccountNumber.value); 
 		</script>
 		<script src="../JS/AJAX/accountMainPageAJAX.js"></script>
 		<script src="../JS/pageManipulate.js"></script>

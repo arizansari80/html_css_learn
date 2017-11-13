@@ -23,3 +23,12 @@
 	margin-left:0%;
 	margin-top:50px;
 }
+#personalInfoTable{
+	border:2px solid purple;
+	height:80%;
+	width:97%;
+}
+.PIR>td:first-of-type{
+	font-weight:bold;
+	width:20%;
+}

@@ -1,7 +1,7 @@
 <?php
 	print "<p class='infoTag colorInfo'>Manage Your Profile</p>
 			<div class='myFlexDisplay totalWidth'>
-				<p class='paraLink halfWidth colorInfo'>Personal Details</p>
+				<p class='paraLink halfWidth colorInfo' id='getPersonalDetail'>Personal Details</p>
 				<p class='paraLink halfWidth colorInfo'>Update Email</p>
 			</div>
 			<div class='myFlexDisplay totalWidth'>
