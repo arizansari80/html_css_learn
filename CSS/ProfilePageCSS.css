@@ -24,11 +24,16 @@
 	margin-top:50px;
 }
 #personalInfoTable{
-	border:2px solid purple;
+	border:1px solid purple;
 	height:80%;
 	width:97%;
 }
 .PIR>td:first-of-type{
 	font-weight:bold;
 	width:20%;
+}
+#buttonAddBenifSection{
+	width:30%;
+	margin-left:20%;
+	margin-top:10px;
 }

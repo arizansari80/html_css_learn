@@ -6,7 +6,7 @@
 			</div>
 			<div class='myFlexDisplay totalWidth'>
 				<p class='paraLink halfWidth colorInfo'>Define Limits</p>
-				<p class='paraLink halfWidth colorInfo'>Manage Benificiaries</p>
+				<p class='paraLink halfWidth colorInfo' id='addBenifLink'>Add Benificiaries</p>
 			</div>
 			<div class='myFlexDisplay totalWidth'>
 				<p class='paraLink halfWidth colorInfo'>Change Password</p>
