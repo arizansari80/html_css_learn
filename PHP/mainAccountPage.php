@@ -33,8 +33,17 @@
 				$query="SELECT Balance FROM AccountInfo WHERE UserId='$user'";
 				$query_result=mysqli_query($conn,$query);
 				$row=mysqli_fetch_array($query_result);
-				$jsObj[4]=$row[0];
-
+				$query="SELECT BranchName from CustomerInfo where AccountNumber='$accN'";
+				$query_result=mysqli_query($conn,$query);
+				$rowx=mysqli_fetch_array($query_result);
+				$query="SELECT IFSCCode from BankBranches where BranchName='$rowx[0]'";
+				$query_result=mysqli_query($conn,$query);
+				$rowy=mysqli_fetch_array($query_result);
+				$branchCode=substr($rowy[0],6,5);
+				$jsObj[4]=$rowx[0];
+				$jsObj[5]=$branchCode;
+				$jsObj[6]=$rowy[0];
+				$jsObj[7]=$row[0];
 				//HTML Design
 				$abc="<header class='totalWidth'>
 			<div></div>
@@ -75,6 +84,18 @@
 						</tr>
 						<tr class='categoryInfo'>
 							<td>Mobile</td>
+							<td class='loginUpdate'></td>
+						</tr>
+						<tr class='categoryInfo'>
+							<td>Branch Name</td>
+							<td class='loginUpdate'></td>
+						</tr>
+						<tr class='categoryInfo'>
+							<td>Branch Code</td>
+							<td class='loginUpdate'></td>
+						</tr>
+						<tr class='categoryInfo'>
+							<td>IFSC Code</td>
 							<td class='loginUpdate'></td>
 						</tr>
 						<tr class='categoryInfo'>

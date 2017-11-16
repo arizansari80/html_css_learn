@@ -20,7 +20,7 @@
 	    print $myJSON;
 	}
 	else{
-		$query_acc="SELECT tempAccNumber FROM tempRef WHERE 	tempRefID='$recvRefID'";
+		$query_acc="SELECT tempAccNumber FROM tempRef WHERE tempRefID='$recvRefID'";
 		$query_acc_res=mysqli_query($temp_db_conn,$query_acc);
 		$row=mysqli_fetch_array($query_acc_res);
 		$accNumber=$row[0];

@@ -75,20 +75,23 @@ function getAddBenifPage(){
 		}
 	}
 	function addBenif(){
-		var addBenifJSON={
+		var addBenifJS={
 			masterAcc:masterAccountNumber,
-			benifName:document.getElementById('addBenifName'),
-			benifAccNumber:document.getElementById('addBenifAccNumber'),
-			benifIFSC:document.getElementById('addBenifIFSC'),
-			benifLimit:document.getElementById('addBenifLimit')
+			benifName:document.getElementById('addBenifName').value,
+			benifAccNumber:document.getElementById('addBenifAccNumber').value,
+			benifIFSC:document.getElementById('addBenifIFSC').value,
+			benifLimit:document.getElementById('addBenifLimit').value
 		};
-		addBenifJSON=JSON.stringify('addBenifJSON');
+		console.log(addBenifJS);
+		var addBenifJSON=JSON.stringify(addBenifJS);
+		console.log(addBenifJSON);
 		ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON,true);
 		ajaxHttp.send();
 
 		ajaxHttp.onreadystatechange=function(){
 			if(ajaxHttp.readyState==4&&ajaxHttp.status==200){
 				var responseJSON=JSON.parse(this.responseText);
+				console.log(responseJSON);
 				var showDiv=document.getElementById('addBenifStatusDiv');
 				if(responseJSON.status.localeCompare("Successfull")==0){
 					showDiv.innerText="Benificiary Added Successfully";
