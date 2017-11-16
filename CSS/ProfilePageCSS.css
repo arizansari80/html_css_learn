@@ -33,7 +33,12 @@
 	width:20%;
 }
 #buttonAddBenifSection{
-	width:30%;
+	width:50%;
 	margin-left:20%;
 	margin-top:10px;
+}
+#addBenifStatusDiv{
+	height:20px;
+	width:200px;
+	/*border:2px solid black;*/
 }

@@ -9,13 +9,13 @@ var ajaxHttp=new XMLHttpRequest();
 var masterAccountNumber=document.getElementById('masterAccountNumber').value;
 /*Getting Profile Front*/
 function getProfileFrontF(){
-	console.log("In Profile Front Page AJAX");
+	// console.log("In Profile Front Page AJAX");
 	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/profileFrontPage.php');
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){
 		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
-			console.log(this.responseText);
+			// console.log(this.responseText);
 			document.getElementById('mainContent').innerHTML=this.responseText;
 			profilePassSub=document.getElementById('profilePassSubmit');
 			profilePassSub.addEventListener('click',getProfilePage);
@@ -61,7 +61,7 @@ function getPersonalInfoPage(){
 var addBenifButton;
 var resetButtonBenif;
 function getAddBenifPage(){
-	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/addbenificiary.php');
+	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/getBenificiaryPage.php');
 	ajaxHttp.send();
 	ajaxHttp.onreadystatechange=function(){
 		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
@@ -71,10 +71,35 @@ function getAddBenifPage(){
 			resetButtonBenif=document.getElementById('resetBenif');
 			addBenifButton.addEventListener('click',addBenif);
 			resetButtonBenif.addEventListener('click',resetBenif);
+			document.getElementById('buttonAddBenifSection').style.justifyContent='space-between';
 		}
 	}
 	function addBenif(){
+		var addBenifJSON={
+			masterAcc:masterAccountNumber,
+			benifName:document.getElementById('addBenifName'),
+			benifAccNumber:document.getElementById('addBenifAccNumber'),
+			benifIFSC:document.getElementById('addBenifIFSC'),
+			benifLimit:document.getElementById('addBenifLimit')
+		};
+		addBenifJSON=JSON.stringify('addBenifJSON');
+		ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON,true);
+		ajaxHttp.send();
 
+		ajaxHttp.onreadystatechange=function(){
+			if(ajaxHttp.readyState==4&&ajaxHttp.status==200){
+				var responseJSON=JSON.parse(this.responseText);
+				var showDiv=document.getElementById('addBenifStatusDiv');
+				if(responseJSON.status.localeCompare("Successfull")==0){
+					showDiv.innerText="Benificiary Added Successfully";
+					showDiv.className="myVisibilityShow bgSuccess colorSuccess";
+				}
+				else{
+					showDiv.innerText="Benificiary Addition Unsuccessfull";
+					showDiv.className="myVisibilityShow bgWarning colorWarning";	
+				}
+			}
+		}
 	}
 	function resetBenif(){
 
