@@ -7,6 +7,7 @@
   	<link rel="stylesheet" href="../../CSS/myCustom.css">
   	<link rel="stylesheet" href="../../CSS/accountMainPageCSS.css">
   	<link rel="stylesheet" href="../../CSS/ProfilePageCSS.css">
+  	<link rel="stylesheet" href="../../CSS/payementPageCSS.css">
 </head>
 <body>
 	<header class="totalWidth">
@@ -31,50 +32,21 @@
 			<!-- ul.mainMenu>li.menuItem* -->
 		</nav>
 		<main id="mainContent" class="totalHeight">
-			<!-- <p class="infoTag colorInfo">Account Profile</p>
-			<div class="mainContentClass">
-				<section>
-					<input type="password" id="profilePassTextBox"><br>
-					<button type="button" id="profilePassSubmit" class="myButton">Submit</button>
-					<p id="forgotProfilePassword">Forgot Profiel Password?</p>
-					<p id="changeProfilePassword">Change Profiel Password</p>
-					<p class="colorWarning myHidden">*Wrong Password</p>
-				</section>
-			</div> -->
-			<p class="infoTag colorInfo">Add Benificiary</p>
-			<table id="personalInfoTable">
-				<tr class="PIR">
-					<td>Name</td>
-					<td><input type="text"></td>
-				</tr>
-				<tr class="PIR">
-					<td>Account Number</td>
-					<td><input type="text" class="onlyNumber"></td>
-				</tr>
-				<tr class="PIR">
-					<td>Confirm Account Number</td>
-					<td><input type="text" class="onlyNumber"></td>
-				</tr>
-				<tr class="PIR">
-					<td>Branch</td>
-					<td><input type="text"></td>
-				</tr>
-				<tr class="PIR">
-					<td>IFSC Code</td>
-					<td><input type="text"></td>
-				</tr>
-				<tr class="PIR">
-					<td>Branch Code</td>
-					<td><input type="text" class="onlyNumber"></td>
-				</tr>
-				<tr class="PIR">
-					<td>Benificiary Limit</td>
-					<td><input type="text" class="onlyNumber"></td>
+			<p class='infoTag colorInfo'>Payement/Transfer Section</p>
+			<table id='benifListTable' border='0'>
+				<tr>
+					<th><input type="radio" style='visibility:hidden'></th>
+					<th>Benificiary Name</th>
+					<th>Name of Bank</th>
+					<th>Branch Name</th>
+					<th>Account Number</th>
+					<th>IFSC Code</th>
+					<th>Benificiary Limit</th>
 				</tr>
 			</table>
-			<section id="buttonAddBenifSection" class="myFlexDisplay">
-				<button type="button">Add Benificiary</button>
-				<button type="button">Reset</button>
+			<section id='payementButtonSection' class='myFlexDisplay totalWidth'>
+				<button type='button' id='payNow'>Pay Now</button>
+				<button type='button' id='payNow'>Clear</button>
 			</section>
 		</main>
 	</div>

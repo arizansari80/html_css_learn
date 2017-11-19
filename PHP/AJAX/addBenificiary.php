@@ -10,28 +10,27 @@
 	$dbname = "ibsnetbanking";
 
 	// Create connection
-	$responseObj;
-	$responseObj->status="Unsuccessfull";
+	$response="Unsuccessfull";
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	// Check connection
 	if (!$conn)
-		print $responseObj;
+		print $response;
 	else{
 		$branch=substr($myObj->benifIFSC,6,5);
 		$ifsc=$myObj->benifIFSC;
 		$benifAcc=intval($myObj->benifAccNumber);
 		$benifLimit=intval($myObj->benifLimit);
+		$benifName=$myObj->benifName;
 		$query="INSERT INTO Benificiary values ('$masterAcc','$stat','$benifAcc','$benifName','Indian Bank of States','$branch','$ifsc','$benifLimit')";
 		$query_result=mysqli_query($conn,$query);
 		if(!$query_result)
-			print $responseObj;
+			print $response;
 		else{
-			mysqli_close($conn);
-			$responseObj->status="Successfull";
-			print $responseObj;
+			$response="Successfull";
+			print $response;
 		}
+		mysqli_close($conn);
 	}
-
 	// $query = "SELECT * FROM referenceNumber";
 	// $query_result = mysqli_query($conn, $sql);
 ?>

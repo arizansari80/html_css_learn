@@ -33,5 +33,5 @@
 				</div>
 				<div id='addBenifStatusDiv'></div>
 			</section>";
-	print $reply;	
+	print $reply;
 ?>

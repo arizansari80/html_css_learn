@@ -7,6 +7,7 @@
 	  	<link rel="stylesheet" href="../CSS/myCustom.css">
 		<link rel="stylesheet" href="../CSS/accountMainPageCSS.css">
 		<link rel="stylesheet" href="../CSS/ProfilePageCSS.css">
+		<link rel="stylesheet" href="../CSS/payementPageCSS.css">
 	</head>
 	<body>
 		<?php

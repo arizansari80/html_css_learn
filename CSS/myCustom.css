@@ -212,7 +212,9 @@ ul{
 
 .myFlexDisplay{
 	display:flex;
-	/*justify-content:space-between;*/
+}
+.justifyContentAround{
+	justify-content:space-around;
 }
 
 

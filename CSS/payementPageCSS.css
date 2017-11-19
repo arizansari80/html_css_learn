@@ -1,0 +1,29 @@
+#benifListTable{
+	width:95%;
+}
+#benifListTable th{
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align:left;
+	font-weight:bold;
+	background:lightgreen;
+}
+#benifListTable tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+#benifListTable tr:hover{
+	background-color: #ddd;		
+}
+#benifListTable td{
+	border-bottom:1px solid black;
+}
+#payementButtonSection{
+	margin-top:10px;
+}
+#payementButtonSection>button{
+	width:100px;
+	height:25px;
+}
+#payementButtonSection>button:first-of-type{
+	margin-right:10px;
+}

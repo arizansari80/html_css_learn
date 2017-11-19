@@ -1,6 +1,11 @@
 var getProfileFront=document.getElementById('2');
 getProfileFront.addEventListener('click',getProfileFrontF);
 
+var getPayementFront=document.getElementById('3');
+getPayementFront.addEventListener('click',getPayementF);
+
+var mainContent=document.getElementById('mainContent');
+
 var profilePassSub=document.getElementById('profilePassSubmit');
 if(profilePassSub!=null)
 profilePassSub.addEventListener('click',getProfilePage);
@@ -74,37 +79,65 @@ function getAddBenifPage(){
 			document.getElementById('buttonAddBenifSection').style.justifyContent='space-between';
 		}
 	}
-	function addBenif(){
-		var addBenifJS={
-			masterAcc:masterAccountNumber,
-			benifName:document.getElementById('addBenifName').value,
-			benifAccNumber:document.getElementById('addBenifAccNumber').value,
-			benifIFSC:document.getElementById('addBenifIFSC').value,
-			benifLimit:document.getElementById('addBenifLimit').value
-		};
-		console.log(addBenifJS);
-		var addBenifJSON=JSON.stringify(addBenifJS);
-		console.log(addBenifJSON);
-		ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON,true);
-		ajaxHttp.send();
+}
 
-		ajaxHttp.onreadystatechange=function(){
-			if(ajaxHttp.readyState==4&&ajaxHttp.status==200){
-				var responseJSON=JSON.parse(this.responseText);
-				console.log(responseJSON);
-				var showDiv=document.getElementById('addBenifStatusDiv');
-				if(responseJSON.status.localeCompare("Successfull")==0){
-					showDiv.innerText="Benificiary Added Successfully";
-					showDiv.className="myVisibilityShow bgSuccess colorSuccess";
-				}
-				else{
-					showDiv.innerText="Benificiary Addition Unsuccessfull";
-					showDiv.className="myVisibilityShow bgWarning colorWarning";	
-				}
+function addBenif(){
+	var addBenifJS={
+		masterAcc:masterAccountNumber,
+		benifName:document.getElementById('addBenifName').value,
+		benifAccNumber:document.getElementById('addBenifAccNumber').value,
+		benifIFSC:document.getElementById('addBenifIFSC').value,
+		benifLimit:document.getElementById('addBenifLimit').value
+	};
+	var addBenifJSON=JSON.stringify(addBenifJS);
+	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON);
+	ajaxHttp.send();
+
+	ajaxHttp.onreadystatechange=function(){
+		if(ajaxHttp.readyState==4&&ajaxHttp.status==200){
+			var showDiv=document.getElementById('addBenifStatusDiv');
+			if(this.responseText.localeCompare("Successfull")==0){
+				showDiv.innerText="Benificiary Addition Successfull";
+				showDiv.className="myVisibilityShow bgSuccess colorSuccess";
+			}
+			else{
+				showDiv.innerText="Benificiary Addition Failed";
+				showDiv.className="myVisibilityShow bgWarning colorWarning";	
 			}
 		}
 	}
-	function resetBenif(){
+}
 
+function resetBenif(){
+
+}
+
+var transferLinkPage;
+
+function getPayementF(){
+	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/payementPage.php');
+	ajaxHttp.send();
+
+	ajaxHttp.onreadystatechange=function(){
+		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
+			mainContent.innerHTML=this.responseText;
+			transferLinkPage=document.getElementById('transferLinkPage');
+			transferLinkPage.addEventListener('click',getLinkPage);
+		}
+	}
+}
+
+function getLinkPage(){
+	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/benifListPage.php?q='+masterAccountNumber);
+	ajaxHttp.send();
+
+	ajaxHttp.onreadystatechange=function(){
+		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
+			var myJSON=JSON.parse(this.responseText);
+			console.log(myJSON);
+			if(myJSON.status.localeCompare('success')==0){
+				mainContent.innerHTML=myJSON.text;
+			}
+		}
 	}
 }
