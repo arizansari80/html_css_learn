@@ -33,6 +33,47 @@
 		</nav>
 		<main id="mainContent" class="totalHeight">
 			<p class='infoTag colorInfo'>Payement/Transfer Section</p>
+			<table id="senderInfoTable">
+				<tr>
+					<th><input type="radio" style='visibility:hidden'></th>
+					<th>Benificiary Name</th>
+					<th>Name of Bank</th>
+					<th>Branch Name</th>
+					<th>Account Number</th>
+				</tr>
+				<tr>
+					<td><input type="radio" checked="true"></td>
+					<td>Muhammad Ariz Ansari</td>
+					<td>Indian Bank of States</td>
+					<td>Jasola</td>
+					<td>171023123456</td>
+				</tr>
+			</table>
+			<table id="payementInfoTable">
+				<tr>
+					<th>Selected Account Number</th>
+					<td id="senderAccountNumber"></td>
+				</tr>
+				<tr>
+					<th>Amount</th>
+					<td><input type="text" class="onlyNumber" id="amountToTransfer"></td>
+				</tr>
+				<tr>
+					<th>Remarks</th>
+					<td><input type="text"></td>
+				</tr>
+			</table>
+			<!-- <p style="font-weight:bold">Selected Account Number</p>
+			<div id="payementInfoSection">
+				<section class="myFlexDisplay">
+					<p style="font-weight:bold">Amount</p>
+					<input type="text" class="onlyNumber">
+				</section>
+				<section class="myFlexDisplay">
+					<p style="font-weight:bold">Remarks</p>
+					<input type="text">
+				</section>
+			</div> -->
 			<table id='benifListTable' border='0'>
 				<tr>
 					<th><input type="radio" style='visibility:hidden'></th>
@@ -43,8 +84,26 @@
 					<th>IFSC Code</th>
 					<th>Benificiary Limit</th>
 				</tr>
+				<tr>
+					<td><input type="radio" name='creditAccountChoice'></td>
+					<td>Muhammad Ariz Ansari</td>
+					<td>Indian Bank of States</td>
+					<td>Jasola</td>
+					<td>171023123456</td>
+					<td>IBSN00AAEEC</td>
+					<td>10000</td>
+				</tr>
+				<tr>
+					<td><input type="radio" name='creditAccountChoice'></td>
+					<td>Muhammad Afroz Akhtar</td>
+					<td>Indian Bank of States</td>
+					<td>Jasola</td>
+					<td>171023201754</td>
+					<td>IBSN00AAEEC</td>
+					<td>20000</td>
+				</tr>
 			</table>
-			<section id='payementButtonSection' class='myFlexDisplay totalWidth'>
+			<section id='payementButtonSection' class='myFlexDisplay'>
 				<button type='button' id='payNow'>Pay Now</button>
 				<button type='button' id='payNow'>Clear</button>
 			</section>

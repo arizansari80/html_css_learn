@@ -156,7 +156,9 @@
 			$('#userName')[0].innerText+=" "+myObj[1]+" ";
 			var localAccountNumber=document.getElementById('masterAccountNumber');
 			localAccountNumber.value=<?php print $accN?>;
-			console.log(localAccountNumber.value); 
+			console.log(localAccountNumber.value);
+			var senderName=myObj[1]; 
+			var senderBranch=myObj[4];
 		</script>
 		<script src="../JS/AJAX/accountMainPageAJAX.js"></script>
 		<script src="../JS/pageManipulate.js"></script>

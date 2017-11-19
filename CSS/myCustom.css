@@ -216,6 +216,9 @@ ul{
 .justifyContentAround{
 	justify-content:space-around;
 }
+.justifyContentBetween{
+	justify-content:space-between;
+}
 
 
 /*Anonymous Classes*/
@@ -327,6 +330,9 @@ fieldset>div{
 }
 .totalWidth{
 	width:100%;
+}
+.width90{
+	width:90%;
 }
 .totalHW{
 	height:100%;

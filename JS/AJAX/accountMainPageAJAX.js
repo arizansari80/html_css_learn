@@ -128,7 +128,13 @@ function getPayementF(){
 }
 
 function getLinkPage(){
-	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/benifListPage.php?q='+masterAccountNumber);
+	var senderInfo={
+		userName:senderName,
+		senderAccNumber:masterAccountNumber,
+		senderBranchName:senderBranch
+	};
+	senderInfo=JSON.stringify(senderInfo);
+	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/benifListPage.php?q='+senderInfo);
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){

@@ -1,7 +1,7 @@
-#benifListTable{
+#benifListTable,#senderInfoTable{
 	width:95%;
 }
-#benifListTable th{
+#benifListTable th,#senderInfoTable th{
 	padding-top:10px;
 	padding-bottom:10px;
 	text-align:left;
@@ -26,4 +26,13 @@
 }
 #payementButtonSection>button:first-of-type{
 	margin-right:10px;
+}
+#payementInfoTable{
+	width:35%;
+}
+#payementInfoTable>th{
+	font-weight:bold;
+}
+th{
+	text-align:left;
 }
