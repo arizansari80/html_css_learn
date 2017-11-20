@@ -87,7 +87,8 @@ function addBenif(){
 		benifName:document.getElementById('addBenifName').value,
 		benifAccNumber:document.getElementById('addBenifAccNumber').value,
 		benifIFSC:document.getElementById('addBenifIFSC').value,
-		benifLimit:document.getElementById('addBenifLimit').value
+		benifLimit:document.getElementById('addBenifLimit').value,
+		benifBranch:document.getElementById('addBenifBranchName').value
 	};
 	var addBenifJSON=JSON.stringify(addBenifJS);
 	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON);
@@ -143,7 +144,31 @@ function getLinkPage(){
 			console.log(myJSON);
 			if(myJSON.status.localeCompare('success')==0){
 				mainContent.innerHTML=myJSON.text;
+				var payNowButton=document.getElementById('payNow');
+				payNowButton.addEventListener('click',transferNowFunction);
 			}
 		}
 	}
+}
+
+var creditAccountNumber;
+var debitAccountNumber;
+
+function transferNowFunction(){
+	var creditChoiceArr=document.getElementsByName('creditAccountChoice');
+	var l=creditChoiceArr.length;
+	var z;
+	for(var i=0;i<l;i++){
+		console.log(creditChoiceArr[i].checked);
+		if(creditChoiceArr[i].checked==true){
+			console.log("Yeah");
+			z=creditChoiceArr[i];
+			break;
+		}
+	}
+	var focusAccount=z.parentElement.parentElement;
+	creditAccountNumber=focusAccount.getElementsByClassName('creditAccountNumber')[0].innerText;
+	creditAccountNumber=parseInt(creditAccountNumber);
+	debitAccountNumber=document.getElementsByClassName('debitAccountNumber')[0].innerText;
+	debitAccountNumber=parseInt(debitAccountNumber);
 }

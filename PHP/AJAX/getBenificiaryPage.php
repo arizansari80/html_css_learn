@@ -18,8 +18,8 @@
 					<td><input type='text' id='addBenifIFSC'></td>
 				</tr>
 				<tr class='PIR'>
-					<td>Branch Code</td>
-					<td><input type='text' class='onlyNumber' id='addBenifBranchCode'></td>
+					<td>Branch Name</td>
+					<td><input type='text' class='onlyNumber' id='addBenifBranchName'></td>
 				</tr>
 				<tr class='PIR'>
 					<td>Benificiary Limit</td>

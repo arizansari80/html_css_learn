@@ -21,6 +21,13 @@
 	    die("Connection failed: " . mysqli_connect_error());
 	}
 	else{
+		$query="SELECT UserId FROM LoginInfo WHERE AccountNumber='$masterAccountNumber'";
+		$query_result=mysqli_query($conn,$query);
+		$row=mysqli_fetch_array($query_result);
+		$query="SELECT Balance FROM AccountInfo WHERE UserId='$row[0]'";
+		$query_result=mysqli_query($conn,$query);
+		$row=mysqli_fetch_array($query_result);
+		$senderBalance=$row[0];
 		$firstPart="<p class='infoTag colorInfo'>Payement/Transfer Section</p>
 			<table id='senderInfoTable'>
 				<tr>
@@ -29,13 +36,15 @@
 					<th>Name of Bank</th>
 					<th>Branch Name</th>
 					<th>Account Number</th>
+					<th>Balance</th>
 				</tr>
 				<tr>
 					<td><input type='radio' checked='true'></td>
 					<td>$senderName</td>
 					<td>Indian Bank of States</td>
 					<td>$senderBranch</td>
-					<td>$masterAccountNumber</td>
+					<td class='debitAccountNumber'>$masterAccountNumber</td>
+					<td>$senderBalance</td>
 				</tr>
 			</table>
 			<table id='payementInfoTable'>
@@ -45,7 +54,7 @@
 				</tr>
 				<tr>
 					<th>Amount</th>
-					<td><input type='text' class='onlyNumber' id='amountToTransfer'></td>
+					<td><input type='text' id='amountToTransfer' class='onlyNumber'></td>
 				</tr>
 				<tr>
 					<th>Remarks</th>
@@ -75,17 +84,18 @@
 				$row=array_values($row);
 				$secondPart.="<tr>
 							<td><input type='radio' name='creditAccountChoice'></td>";
-				for($i=0;$i<6;$i++){
-					$secondPart.="<td>";
-					$secondPart.=$row[$i];
-					$secondPart.="</td>";
-				}
+				$secondPart.="<td>$row[0]</td>";
+				$secondPart.="<td>$row[1]</td>";
+				$secondPart.="<td>$row[2]</td>";
+				$secondPart.="<td class='creditAccountNumber'>$row[3]</td>";
+				$secondPart.="<td>$row[4]</td>";
+				$secondPart.="<td>$row[5]</td>";
 				$secondPart.="</tr>";
 			}
 			$secondPart.="</table>";
 			$thirdPart="<section id='payementButtonSection' class='myFlexDisplay'>
 				<button type='button' id='payNow'>Pay Now</button>
-				<button type='button' id='payNow'>Clear</button>
+				<button type='button' id='resetPayNow'>Clear</button>
 			</section>";
 			$responseObj->status="success";
 			$responseObj->text=$firstPart.$secondPart.$thirdPart;

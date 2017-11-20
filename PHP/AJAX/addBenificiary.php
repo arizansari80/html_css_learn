@@ -16,7 +16,7 @@
 	if (!$conn)
 		print $response;
 	else{
-		$branch=substr($myObj->benifIFSC,6,5);
+		$branch=$myObj->benifBranch;
 		$ifsc=$myObj->benifIFSC;
 		$benifAcc=intval($myObj->benifAccNumber);
 		$benifLimit=intval($myObj->benifLimit);
