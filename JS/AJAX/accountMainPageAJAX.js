@@ -77,6 +77,7 @@ function getAddBenifPage(){
 			addBenifButton.addEventListener('click',addBenif);
 			resetButtonBenif.addEventListener('click',resetBenif);
 			document.getElementById('buttonAddBenifSection').style.justifyContent='space-between';
+			getOnlyNum();
 		}
 	}
 }
@@ -128,6 +129,9 @@ function getPayementF(){
 	}
 }
 
+var amountToTransfer;
+var payNowButton;
+
 function getLinkPage(){
 	var senderInfo={
 		userName:senderName,
@@ -144,8 +148,11 @@ function getLinkPage(){
 			console.log(myJSON);
 			if(myJSON.status.localeCompare('success')==0){
 				mainContent.innerHTML=myJSON.text;
-				var payNowButton=document.getElementById('payNow');
+				payNowButton=document.getElementById('payNow');
 				payNowButton.addEventListener('click',transferNowFunction);
+				// amountToTransfer=document.getElementById('amountToTransfer');
+				// amountToTransfer.addEventListener('blur',checkAvailBalance);
+				getOnlyNum();
 			}
 		}
 	}
@@ -171,4 +178,12 @@ function transferNowFunction(){
 	creditAccountNumber=parseInt(creditAccountNumber);
 	debitAccountNumber=document.getElementsByClassName('debitAccountNumber')[0].innerText;
 	debitAccountNumber=parseInt(debitAccountNumber);
+}
+
+var parE;
+
+function checkAvailBalance(e){
+	if(e.target.value==""){
+		e.target.parentElement.nextElementSibling.nextElementSibling.className="myShow balanceNotSufficient";
+	}
 }

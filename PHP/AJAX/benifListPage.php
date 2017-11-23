@@ -32,7 +32,7 @@
 			<table id='senderInfoTable'>
 				<tr>
 					<th><input type='radio' style='visibility:hidden'></th>
-					<th>Benificiary Name</th>
+					<th>Sender Option</th>
 					<th>Name of Bank</th>
 					<th>Branch Name</th>
 					<th>Account Number</th>
@@ -55,6 +55,8 @@
 				<tr>
 					<th>Amount</th>
 					<td><input type='text' id='amountToTransfer' class='onlyNumber'></td>
+					<td class='myHidden pleaseFill' style='font-size:12px;'>*Please Fill</td>
+					<td class='myHidden balanceNotSufficient' style='font-size:12px;'>*Balance Not Sufficient</td>
 				</tr>
 				<tr>
 					<th>Remarks</th>

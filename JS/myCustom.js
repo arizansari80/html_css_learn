@@ -96,7 +96,10 @@ if(myDivContainer!=null){
 
 //Empty Field Check
 
-var compulsoryFill=document.getElementsByClassName('compulsory');
+var onlyNum;
+var compulsoryFill;
+
+compulsoryFill=document.getElementsByClassName('compulsory');
 if(compulsoryFill!=null){
 	for (var i = 0; i < compulsoryFill.length-1; i++)
 		compulsoryFill[i].addEventListener('blur',emptyCheck);
@@ -113,17 +116,27 @@ if(compulsoryFill!=null){
 
 //Only Number Check
 
-var onlyNum=document.getElementsByClassName('onlyNumber');
+onlyNum=document.getElementsByClassName('onlyNumber');
 if(onlyNum!=null){
 	for (var i = 0; i < onlyNum.length; i++) {
 		onlyNum[i].addEventListener('keypress',onlyNumCheck);
 	}
+}
 
-	function onlyNumCheck(e){
-		if(e.charCode<48||e.charCode>57)
-			e.preventDefault();
+function getOnlyNum(){
+	onlyNum=document.getElementsByClassName('onlyNumber');
+	if(onlyNum!=null){
+		for (var i = 0; i < onlyNum.length; i++) {
+			onlyNum[i].addEventListener('keypress',onlyNumCheck);
+		}
 	}
 }
+
+function onlyNumCheck(e){
+	if(e.charCode<48||e.charCode>57)
+		e.preventDefault();
+}
+
 
 //Email Validator
 
