@@ -50,10 +50,11 @@
 
 	$server="localhost";
 	$user="root";
-	$pass="ariz80";
+	$pass="";
 	$database="tempibs";
 	$temp_db_server_conn=mysqli_connect($server,$user,$pass,$database);
-
+	
+	$myObj1 = new \stdClass;
 	$myObj1->status="Unsuccessfull";
 
 	if(!$temp_db_server_conn){

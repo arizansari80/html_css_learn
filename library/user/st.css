@@ -1,0 +1,132 @@
+.left_box{
+	position: fixed;
+	width: 250px;
+	height: 100vh;
+	min-height: 350px;
+	background-color: #214e13;           /*#503c90;*/
+}
+.filter_box{
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	border-top: 1px solid #bb950a;
+	border-bottom: 1px solid #bb950a;
+	border-left: 5px solid #bb950a;
+	border-right: 5px solid green;
+	padding: 5% 5% 10% 8%;
+	width: 200px;
+	height: 300px;
+}
+.filter_box input{
+	text-align: center;
+}
+.filter_box button{
+	position: absolute;
+	bottom: 20px;
+	right: 16px;
+	background-color: orange;
+}
+.filter_box button:active{
+	background-color: #c38005;
+}
+.right_box{
+	position: absolute;
+	left: 250px;
+	width: calc(100vw - 265px);
+	min-width: 715px;
+	border: 1px solid gray;
+	height: 100vh;
+	background-color: #c2c2a3;
+}
+
+.top{
+	position: relative;
+	height: 125px;
+	bottom: 10px;
+	border-right: 5px solid green;
+	border-left: 5px solid green;
+}
+.top span{
+	font-size: 32px;
+	color: green;
+	text-shadow: -2px -1px 3px gray;
+}
+.top img{
+	vertical-align: middle;
+}
+.top button{
+	position: absolute;
+	padding: 10px 8px;
+	right: 5%;
+	top: 70%;
+	background-color: #6cb56c;
+	color: #055805;
+	font-weight: bold; 
+}
+.top button:hover{
+	box-shadow: 0 0 15px gray;
+	text-shadow: -1px -1px gray;
+}
+.top button:active{
+	background-color: #04ad04;
+}
+hr{
+	margin: 0;
+}
+.clk{
+	position: absolute;
+	top: 30px;
+	right: 5.5%;
+	font-family: sans-serif;
+	text-align: center;
+	color: #130eb1;
+	line-height: 5px;
+	background-color: rgba(194,194,163,0.6);
+	text-shadow: -2px -1px 3px gray;
+}
+.bottom{
+	height: calc(100vh - 180px);
+	border-left: 5px solid blue;
+	border-right: 5px solid blue;
+}
+.bottom fieldset{
+	height: calc(100% - 10px);
+	background-color: #e0e0c7;
+	box-shadow: inset -3px -8px 30px gray;
+}
+.bottom b{
+	color: #0404b7;
+}
+#tbl{
+	height: calc(100% - 20px);
+	overflow: auto;
+	border-top: 2px solid #424141;
+	border-bottom: 1px solid gray;
+}
+::selection{
+	background-color: blue;
+	color:yellow;
+}
+.bottom table{
+	width: 100%;
+	border-collapse: collapse;
+}
+.bottom table th{
+	color: #770b09;
+	background-color: rgba(21, 107, 5, 0.28);
+}
+.bottom table td,
+.bottom table th
+{
+	border: 1px solid #27b725;
+	padding: 5px 10px;
+}
+.bottom table tr:nth-child(even){
+	background-color: #d0d0d0;
+}
+input[type="checkbox"]{
+	float: right;
+}

@@ -39,7 +39,7 @@
 
 	$server="localhost";
 	$user="root";
-	$pass="ariz80";
+	$pass="";
 	$database="tempibs";
 	$temp_db_server_conn=mysqli_connect($server,$user,$pass,$database);
 

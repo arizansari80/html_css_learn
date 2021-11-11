@@ -1,0 +1,57 @@
+.login-page{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid black;
+  width: 450px;
+  height: 200px;
+  text-align: center;
+  background-color: rgba(137, 69, 46,0.35) ;
+  box-shadow: -6px 5px 3px #2c150f;
+}
+
+
+input{
+  display: block;
+  margin: 20px;
+  width: 253px;
+  height: 25px;
+  margin-left: 97px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgba(143, 67, 43, 0.62);
+  outline: 1px solid #42241a;
+}
+input[type="text"]{
+  margin-top: 40px;
+}
+button{
+  width: 253px;
+  height: 25px;
+  background-color: #038c03;
+  color: white;
+  border: 0;
+  font-size: 18px;
+}
+button:hover{
+  box-shadow: 0 0 10px gray;
+  border: 1px solid gray;
+  outline: 1px solid blue;
+}
+button:active{
+  transform: translateY(1px);
+}
+body{
+  background: url("wood.jpg");
+}
+.login-page form p{
+  color: #fbec04; 
+  position: relative; 
+  left: 0; 
+  right: 0; 
+  margin: auto; 
+}

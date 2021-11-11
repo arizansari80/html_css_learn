@@ -6,7 +6,7 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "ariz80";
+	$password = "";
 	$dbname = "ibsnetbanking";
 
 	// Create connection

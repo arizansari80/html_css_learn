@@ -12,7 +12,6 @@
 
 	// $myJSON = json_encode($myObj);
 
-	$myObj=json_decode($_REQUEST['q'],false);
-	$myJSON = json_encode($myObj);
-	print $myJSON;
+	$myObj=23;
+	print 'This is my $myObj';
 ?>

@@ -2,11 +2,12 @@
 	$myObj=json_decode($_REQUEST['q'],false);
 	$servername = "localhost";
 	$username = "root";
-	$password = "ariz80";
+	$password = "";
 	$dbname = "ibsnetbanking";
 
 	// Create connection
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	$Obj = new \stdClass;
 	$Obj->status="Failed";
 	// Check connection
 	if (!$conn) {
@@ -33,8 +34,10 @@
 				
 				$pass=$myObj->password;
 				$gpass=$row[1];
-				$u=str_split($myObj->user);
-				$p=str_split($gpass);
+				//$u=str_split($myObj->user);
+				//$p=str_split($gpass);
+				$u=$myObj->user;
+				$p=$gpass;
 				$m=strlen($u);
 				$n=strlen($gpass);
 				$i=0;

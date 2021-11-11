@@ -13,7 +13,7 @@
 		<?php
 			$server="localhost";
 			$user="root";
-			$pass="ariz80";
+			$pass="";
 			$database="ibsnetbanking";
 			$table="BankBranches";
 			$conn=mysqli_connect($server,$user,$pass,$database);

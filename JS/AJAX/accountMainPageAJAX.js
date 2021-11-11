@@ -15,7 +15,7 @@ var masterAccountNumber=document.getElementById('masterAccountNumber').value;
 /*Getting Profile Front*/
 function getProfileFrontF(){
 	// console.log("In Profile Front Page AJAX");
-	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/profileFrontPage.php');
+	ajaxHttp.open('GET','http://localhost:81/Project/PHP/AJAX/profileFrontPage.php');
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){
@@ -33,7 +33,7 @@ var addBenifLink;
 /*Getting Profile Page*/
 function getProfilePage(){
 	console.log("In Profile Page AJAX");
-	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/profileMainPage.php');
+	ajaxHttp.open('GET','http://localhost:81/Project/PHP/AJAX/profileMainPage.php');
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){
@@ -52,7 +52,7 @@ function getProfilePage(){
 function getPersonalInfoPage(){
 	var accNo=document.getElementById('masterAccountNumber');
 	console.log(accNo.value);
-	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/personalInfoPage.php?q='+accNo.value);
+	ajaxHttp.open('POST','http://localhost:81/Project/PHP/AJAX/personalInfoPage.php?q='+accNo.value);
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){
@@ -66,7 +66,7 @@ function getPersonalInfoPage(){
 var addBenifButton;
 var resetButtonBenif;
 function getAddBenifPage(){
-	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/getBenificiaryPage.php');
+	ajaxHttp.open('GET','http://localhost:81/Project/PHP/AJAX/getBenificiaryPage.php');
 	ajaxHttp.send();
 	ajaxHttp.onreadystatechange=function(){
 		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
@@ -92,7 +92,7 @@ function addBenif(){
 		benifBranch:document.getElementById('addBenifBranchName').value
 	};
 	var addBenifJSON=JSON.stringify(addBenifJS);
-	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON);
+	ajaxHttp.open('POST','http://localhost:81/Project/PHP/AJAX/addBenificiary.php?q='+addBenifJSON);
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){
@@ -117,7 +117,7 @@ function resetBenif(){
 var transferLinkPage;
 
 function getPayementF(){
-	ajaxHttp.open('GET','http://localhost/Project/PHP/AJAX/payementPage.php');
+	ajaxHttp.open('GET','http://localhost:81/Project/PHP/AJAX/payementPage.php');
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){
@@ -139,7 +139,7 @@ function getLinkPage(){
 		senderBranchName:senderBranch
 	};
 	senderInfo=JSON.stringify(senderInfo);
-	ajaxHttp.open('POST','http://localhost/Project/PHP/AJAX/benifListPage.php?q='+senderInfo);
+	ajaxHttp.open('POST','http://localhost:81/Project/PHP/AJAX/benifListPage.php?q='+senderInfo);
 	ajaxHttp.send();
 
 	ajaxHttp.onreadystatechange=function(){

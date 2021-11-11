@@ -26,13 +26,14 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$passwordd = "ariz80";
+	$passwordd = "";
 	$dbname = "ibsnetbanking";
 	$temp="tempibs";
 
 	// Create connection
 	$permanent_conn = mysqli_connect($servername, $username, $passwordd, $dbname);
 	$temp_db_conn=mysqli_connect($servername, $username, $passwordd,$temp);
+	$myObj = new \stdClass;
 	$myObj->status="Failed";
 	// Check connection
 	if (!$permanent_conn||!$temp_db_conn) {
@@ -52,7 +53,7 @@
 		$query_ins_res=mysqli_query($permanent_conn,$query_ins);
 
 		//Getting CustInfo from Temp DB
-		$query_fetch="SELECT * FROM tempCustInfo WHERE tempAccNum='$d2'";
+		$query_fetch="SELECT * FROM tempCustInfo WHERE tempAccNumber='$d2'";
 		$query_fetch_res=mysqli_query($temp_db_conn,$query_fetch);
 			
 		//Data Creation
@@ -69,7 +70,13 @@
 		$mobi=intval($row[8]);
 		$email=$row[9];
 		$accType=$row[10];
-		$Bname="Jasola";
+
+		$query="SELECT BranchName from BankBranches where State='$state'";
+
+		$query_result=mysqli_query($permanent_conn,$query);
+		$rowy=mysqli_fetch_array($query_result);
+
+		$Bname=$rowy[0];
 		
 		//Insert Into Perm Customer Info			
 		$query_ins="INSERT INTO CustomerInfo values ('$accNumber','$name','$gender','$dob','$addr','$district','$state','$pin','$mobi','$email','$accType','$Bname')";
@@ -81,18 +88,18 @@
 		$query_result=mysqli_query($permanent_conn,$query);
 
 		//Insert into Account Info
-		$query_acc_info="INSERT INTO AccountInfo(UserId) values('$user')";
+		$query_acc_info="INSERT INTO AccountInfo (UserId,Balance) values('$user','10000')";
 		$query_acc_res=mysqli_query($permanent_conn,$query_acc_info);
 
 
 		//Del Query From Temp DB
 		$del_query="DELETE FROM tempRef WHERE tempRefID='$recvRefID'";
-		$del_query1="DELETE FROM tempCustInfo WHERE tempAccNum='$accNumber'";
+		$del_query1="DELETE FROM tempCustInfo WHERE tempAccNumber='$accNumber'";
 		$del_res=mysqli_query($temp_db_conn,$del_query);
 		$del_res1=mysqli_query($temp_db_conn,$del_query1);
 		if($del_res&&$del_res1){
 			$qu="UPDATE ReferenceID SET DelPointer='1' WHERE RefID='$recvRefID'";
-			$qu_res=mysqli_query($conn,$qu);
+			$qu_res=mysqli_query($permanent_conn,$qu);
 		}
 		$myObj->status="Successfull";
 		print json_encode($myObj);

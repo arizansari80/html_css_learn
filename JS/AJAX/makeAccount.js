@@ -17,8 +17,8 @@ function getAccountNumber(){
 
 	ajaxHttp.onreadystatechange=function(){
 		if(ajaxHttp.status==200&&ajaxHttp.readyState==4){
+			console.log(this.responseText);
 			var myObj=JSON.parse(this.responseText);
-			console.log(myObj);
 			var accn=document.getElementById('fetchedAccountNumber');
 			if(myObj.status.localeCompare('Success')==0){
 				// console.log(myObj);

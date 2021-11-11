@@ -2,7 +2,7 @@
 	$accN=$_REQUEST['q'];
 	$servername = "localhost";
 	$username = "root";
-	$password = "ariz80";
+	$password = "";
 	$dbname = "ibsnetbanking";
 	$table="CustomerInfo";
 

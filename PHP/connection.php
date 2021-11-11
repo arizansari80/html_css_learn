@@ -3,7 +3,7 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "ariz80";
+	$password = "";
 	$dbname = "tempibs";
 	$i=0;
 	print $efg;

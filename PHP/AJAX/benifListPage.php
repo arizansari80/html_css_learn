@@ -7,9 +7,9 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "ariz80";
+	$password = "";
 	$dbname = "ibsnetbanking";
-
+	$responseObj = new \stdClass;
 	$responseObj->status="Failed";
 	$responseObj->text="";
 

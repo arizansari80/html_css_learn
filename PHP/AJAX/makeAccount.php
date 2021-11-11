@@ -5,9 +5,10 @@
 
 	$servername = "localhost";
 	$username = "root";
-	$password = "ariz80";
+	$password = "";
 	$dbname = "ibsnetbanking";
 
+	$myObj = new \stdClass;
 	$myObj->status="Failed";
 
 	// Create connection
@@ -27,7 +28,7 @@
 
 		
 		/*Get State*/
-		$query_fetch_state="SELECT state from tempCustInfo WHERE tempAccNum='$accNumber'";
+		$query_fetch_state="SELECT state from tempCustInfo WHERE tempAccNumber='$accNumber'";
 		$query_state_res=mysqli_query($temp_db_conn,$query_fetch_state);
 		$row=mysqli_fetch_array($query_state_res);
 		$state=$row[0];
@@ -41,7 +42,7 @@
 			$myObj->error=mysqli_error();
 			$myObj->From="From BankBranches";
 			$myObj->accN=1;
-		    $myJSON=json_encode($myObj);
+		    	$myJSON=json_encode($myObj);
 			print $myJSON;		
 		}
 		else{
@@ -51,8 +52,8 @@
 			$myObj->BCode=substr($row1[2],5);
 			$myObj->status="Success";
 			$myObj->accN=$accNumber;
-		    $myJSON=json_encode($myObj);
-	    	print $myJSON;
+		    	$myJSON=json_encode($myObj);
+	    		print $myJSON;
 		}							
 	}
 	mysqli_close($permanent_conn);
